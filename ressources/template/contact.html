@@ -6,7 +6,7 @@
                         <a href="#" id="returnHome">
                                 <circle cx="1700" cy="40" r="20" transform="rotate(-90 1700 40)"/>
                                 <path d="M 1700,30 L 1700,50" transform="rotate(45 1700 40)"/>
-                                <path d="M 1690,40 L 1710,40" transform="rotate(45 1700 40)"/>         
+                                <path d="M 1690,40 L 1710,40" transform="rotate(45 1700 40)"/>
                         </a>
                         <a href="">
                                 <image href="ressources/style/img/discord.svg" alt="Logo Discord" x="100" y="150" width="150" height="150"/>
@@ -22,7 +22,7 @@
                         </a>
                 </svg>
                 <article>
-                        <form class="formContact" action="#" method="post">
+                        <form id="formContact" action="" method="post">
                                 <label for="name">Nom - Prénom:</label>
                                 <input type="text" name="name">
                                 <label for="mail">Mail:</label>
@@ -30,7 +30,8 @@
                                 <label for="object">Objet:</label>
                                 <input type="text" name="object">
                                 <label for="message">Message:</label>
-                                <textarea name="message"></textarea>
+                                <textarea cols="80" rows="10" name="message"></textarea>
+                                <button type="submit" name="send">Envoyer</button>
                         </form>
                 </article>
         </section>

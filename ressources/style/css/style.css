@@ -348,10 +348,25 @@ a {
   fill: #FFB41D; }
 .mainContact section article {
   position: absolute;
-  top: 50%;
-  left: 42%; }
+  top: 22%;
+  left: 27%; }
   .mainContact section article form {
     display: flex;
     flex-direction: column; }
+    .mainContact section article form input, .mainContact section article form textarea, .mainContact section article form button, .mainContact section article form label {
+      margin: 10px; }
+    .mainContact section article form label, .mainContact section article form button {
+      color: #FFB41D;
+      font-family: "poiret";
+      font-size: 2rem; }
+    .mainContact section article form input, .mainContact section article form textarea, .mainContact section article form button {
+      background-color: rgba(255, 255, 255, 0);
+      border: 1px solid #FFB41D;
+      font-size: 2rem; }
+    .mainContact section article form input, .mainContact section article form textarea {
+      color: white; }
+    .mainContact section article form button {
+      color: #FFB41D;
+      padding: 5px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -558,30 +558,66 @@ a {
 
                                 stroke: $contactColor;
 
-                        }  
+                        }
 
                         image {
 
                                 fill: $contactColor;
 
-                        }    
+                        }
 
                 }
 
                 article {
 
                         position: absolute;
-                        top: 50%;
-                        left: 42%;
+                        top: 22%;
+                        left: 27%;
 
                         form {
 
                                 display : flex;
                                 flex-direction: column;
 
+                                input, textarea, button, label {
+
+                                        margin: 10px;
+
+                                }
+
+
+                                label, button  {
+
+                                        color: $contactColor;
+                                        font-family: "poiret";
+                                        font-size: 2rem;
+
+                                }
+
+                                input, textarea, button {
+
+                                        background-color: rgba(255, 255, 255, 0);
+                                        border: 1px solid $contactColor;
+                                        font-size: 2rem;
+
+                                }
+
+                                input, textarea {
+
+                                        color: white;
+
+                                }
+
+                                button{
+
+                                        color: $contactColor;
+                                        padding: 5px;
+
+                                }
+
                         }
 
-                }                   
+                }
 
         }
 
