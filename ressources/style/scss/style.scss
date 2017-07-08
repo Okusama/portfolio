@@ -1,0 +1,588 @@
+/*Font import*/
+
+@import "_font.scss";
+@include font-face(futur, "../fonts/Clip");
+@include font-face(quicksand, "../fonts/Quicksand-Regular");
+@include font-face(poiret, "../fonts/PoiretOne-Regular");
+
+/*Color variable*/
+
+$bgColor: #16161D;
+$welcomeColor: rgba(214, 201, 201, 1);
+$welcomeColorNeon:#BFB0B0;
+$presentationColor: #FE4F00;
+$presentationColorNeon: rgba(255, 146, 97, 0.4);
+$presentationColorText: #FF9261;
+$makingColor: #D9A4FC;
+$makingColorNeon: rgba(229, 194, 252, 0.4);
+$projectsColor: #FE003E;
+$projectsColorNeon: rgba(254, 142, 170, 0.4);
+$contactColor: #FFB41D;
+$contactColorNeon: rgba(255, 202, 94, 0.4);
+
+/*** Keyframes ***/
+
+
+@keyframes draw {
+        to {
+                stroke-dashoffset: 0;
+        }
+}
+
+@keyframes show {
+
+        0% {
+                opacity: 0;
+                stroke: $welcomeColor;
+
+        }
+        25% { opacity: .2; }
+        50% { opacity: .5;}
+        75% { opacity: .8; }
+        100% {
+                opacity: 0.9;
+                stroke: $welcomeColor;
+        }
+
+}
+
+@keyframes welcomeFlash {
+
+        0% {
+                opacity: .1;
+                box-shadow: 0 0 30px $welcomeColorNeon, inset 0 0 30px $welcomeColorNeon;
+                text-shadow: 0 0 80px $welcomeColorNeon;
+        }
+        4% { opacity: 1; }
+        8% { opacity: .4; }
+        12% { opacity: .1; }
+        16% { opacity: .5; }
+        20% { opacity: 1; }
+        24% { opacity: .4; }
+        28% { opacity: .1; }
+        32% { opacity: .6; }
+        36% { opacity: 1; }
+        40% { opacity: .7; }
+        44% { opacity: .2; }
+        48% { opacity: .1; }
+        52% { opacity: .4; }
+        56% { opacity: .9; }
+        60% { opacity: .2; }
+        64% { opacity: 1; }
+        68% { opacity: .4; }
+        72% { opacity: .1; }
+        76% { opacity: .5; }
+        80% { opacity: .7; }
+        84% { opacity: .9; }
+        88% { opacity: .6; }
+        92% { opacity: .8; }
+        96% { opacity: .2; }
+        100% {
+                opacity: 0.9;
+                box-shadow: 0 0 30px $welcomeColorNeon, inset 0 0 30px $welcomeColorNeon;
+                text-shadow: 0 0 80px $welcomeColorNeon;
+        }
+
+}
+
+@keyframes flash {
+
+        0% { opacity: .1; }
+        4% { opacity: 1; }
+        8% { opacity: .4; }
+        12% { opacity: .1; }
+        16% { opacity: .5; }
+        20% { opacity: 1; }
+        24% { opacity: .4; }
+        28% { opacity: .1; }
+        32% { opacity: .6; }
+        36% { opacity: 1; }
+        40% { opacity: .7; }
+        44% { opacity: .2; }
+        48% { opacity: .1; }
+        52% { opacity: .4; }
+        56% { opacity: .9; }
+        60% { opacity: .2; }
+        64% { opacity: 1; }
+        68% { opacity: .4; }
+        72% { opacity: .1; }
+        76% { opacity: .5; }
+        80% { opacity: .7; }
+        84% { opacity: .9; }
+        88% { opacity: .6; }
+        92% { opacity: .8; }
+        96% { opacity: .2; }
+        100% { opacity: 0.9; }
+
+}
+
+@keyframes fadeOutAuto {
+
+        0% { opacity: 0; }
+        25% { opacity: 0.25; }
+        50% { opacity: 0.5; }
+        75% { opacity: 0.75; }
+        100% { opacity: 0.9 }
+
+}
+
+@keyframes credit {
+
+        0% {
+                top: 100%;
+                opacity: 0;
+        }
+        50% { opacity: 1;}
+        100% {
+
+                20% { top: 20%; }
+                opacity: 1;
+
+        }
+
+}
+
+/****** Général******/
+
+*{
+
+        box-sizing: border-box;
+        transition: all 0.3s linear 0s;
+
+}
+
+html{
+
+        font-size: 62.5%;
+
+}
+
+body{
+
+        background-image: url("../img/burried.png");
+        margin: 0 auto;
+
+}
+
+text{
+
+        text-anchor: middle;
+
+}
+
+a {
+
+        text-decoration: none;
+
+}
+
+/*Welcome Page*/
+
+.mainWelcome {
+
+        section{
+
+                text-align: center;
+                width: 45%;
+                margin-top: 30vh;
+                margin-left: 28vw;
+                animation: welcomeFlash 2s linear 5s forwards
+
+        }
+
+        path{
+
+                stroke: $welcomeColor;
+                stroke-width: 2px;
+                fill-opacity: 0;
+                fill: none;
+                stroke-dasharray: 2600;
+                stroke-dashoffset: 2600;
+                animation-direction: normal;
+                animation: draw 5s linear forwards;
+
+        }
+
+        text{
+
+                fill: $bgColor;
+                font-family: "futur";
+                font-size: 4rem;
+                animation: show 2s linear 5s forwards;
+
+        }
+
+}
+
+/*Home Page*/
+
+.mainHome {
+
+        /*Flex for section*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        section{
+
+                margin: 30px;
+
+        }
+
+        /*Global property for the path SVG*/
+        path {
+
+                stroke-width: 2px;
+                fill-opacity: 0;
+                fill: none;
+                stroke-dasharray: 2520;
+                stroke-dashoffset: 2520;
+                animation-direction: normal;
+                animation: draw 5s linear forwards;
+
+        }
+
+        /*Global property for text SVG*/
+        text{
+
+                font-family: "futur";
+                font-size: 4rem;
+                fill: black;
+
+
+        }
+
+        /*Presentation Section*/
+        >:first-child{
+
+                width: 45%;
+
+                path {
+
+                        stroke: $presentationColor;
+
+                }
+
+                >:hover{
+
+                        box-shadow: 0 0 30px $presentationColorNeon, inset 0 0 30px $presentationColorNeon;
+                        text-shadow: 0 0 80px $presentationColorNeon;
+
+                        animation: flash 0.8s linear forwards;
+
+                        text{
+
+                                fill: $presentationColorText;
+
+                        }
+
+
+
+                }
+
+
+        }
+
+        /*Realisation Section*/
+        >:nth-child(2){
+
+                width: 45%;
+
+                path{
+
+                        stroke: $makingColor;
+
+                }
+
+                >:hover{
+
+                        box-shadow: 0 0 30px $makingColorNeon, inset 0 0 30px $makingColorNeon;
+                        text-shadow: 0 0 50px $makingColorNeon;
+
+                        animation: flash 0.8s linear forwards;
+
+                        text{
+
+                                fill: $makingColor;
+
+                        }
+
+                }
+
+        }
+
+        /*Project section*/
+        >:nth-child(3){
+
+                width: 45%;
+
+                path{
+
+                        stroke: $projectsColor;
+
+                }
+
+                >:hover{
+
+                        box-shadow: 0 0 30px $projectsColorNeon, inset 0 0 30px $projectsColorNeon;
+                        text-shadow: 0 0 50px $projectsColorNeon;
+
+                        animation: flash 0.8s linear forwards;
+
+                        text{
+
+                                fill: $projectsColor;
+
+                        }
+
+
+                }
+
+        }
+
+        /*Contact Section*/
+        >:last-child{
+
+                width: 45%;
+
+                path{
+
+                        stroke: $contactColor;
+
+                }
+
+                >:hover{
+
+                        box-shadow: 0 0 30px $contactColorNeon, inset 0 0 30px $contactColorNeon;
+                        text-shadow: 0 0 50px $contactColorNeon;
+
+                        animation: flash 0.8s linear forwards;
+
+                        text{
+
+                                fill: $contactColor;
+
+                        }
+
+                }
+
+        }
+
+}
+
+/*Global of Presentation, Contact, Realisation and Project*/
+
+.mainPresentation, .mainContact {
+
+        section {
+
+                margin-left: 5vw;
+                margin-top: 5vh;
+                width: 90%;
+
+                svg {
+
+                        path, circle {
+
+                                stroke-width: 2px;
+                                fill-opacity: 0;
+                                fill: none;
+
+                        }
+
+                        circle {
+
+                                opacity: 0;
+                                animation-direction: normal;
+                                animation: fadeOutAuto 5s linear 2s forwards, draw 5s linear 3s forwards;
+
+                        }
+
+                        >:first-child{
+
+                                stroke-dasharray: 4500;
+                                stroke-dashoffset: 4500;
+                                animation-direction: normal;
+                                animation: draw 8s linear forwards;
+
+
+                        }
+
+                        >:nth-child(2){
+
+                                opacity: 0;
+                                font-family: "futur";
+                                font-size: 3rem;
+                                animation: fadeOutAuto 5s linear 5s forwards;
+
+                        }
+
+                        a {
+
+                                opacity: 0;
+                                animation: fadeOutAuto 5s linear 5s forwards;
+
+                        }
+
+                }
+
+        }
+
+}
+
+/*Presentation page*/
+
+.mainPresentation{
+
+        section {
+
+                svg {
+
+                        path, circle{
+
+                                stroke: $presentationColor;
+
+                        }
+
+                        text{
+
+                                stroke: $presentationColor;
+
+                        }
+
+                        .languages {
+
+                                opacity: 0;
+                                font-family: "quicksand";
+                                font-size: 2.5rem;
+                                animation: fadeOutAuto 5s linear 6s forwards;
+
+                        }
+
+                        circle:nth-of-type(1){
+
+                                stroke-dasharray: 453;
+                                stroke-dashoffset: 453;
+
+                        }
+
+                        circle:nth-of-type(2){
+
+                                stroke-dasharray: 396;
+                                stroke-dashoffset: 396;
+
+                        }
+
+                        circle:nth-of-type(3){
+
+                                stroke-dasharray: 340;
+                                stroke-dashoffset: 340;
+
+                        }
+
+                        circle:nth-of-type(4){
+
+                                stroke-dasharray: 283;
+                                stroke-dashoffset: 283;
+
+                        }
+
+                        circle:nth-of-type(5){
+
+                                stroke-dasharray: 283;
+                                stroke-dashoffset: 283;
+
+                        }
+
+                        >path:nth-of-type(2) {
+
+                                opacity: 0;
+                                stroke-dasharray: 1540;
+                                stroke-dashoffset: 1540;
+                                animation-direction: normal;
+                                animation: fadeOutAuto 5s linear 5s forwards, draw 4s linear 8s forwards;
+
+                        }
+
+                        >path:nth-of-type(3) {
+
+                                opacity: 0;
+                                stroke-dasharray: 450;
+                                stroke-dashoffset: 450;
+                                animation-direction: normal;
+                                animation: fadeOutAuto 5s linear 5s forwards, draw 2s linear 10s forwards;
+
+                        }
+
+                        .textTitlePresentation {
+
+                                font-size: 3rem;
+
+                        }
+
+                        .textPresentation {
+
+                                font-size: 2rem;
+                                text-anchor: start;
+
+                        }
+
+                        >:nth-last-child(-n+11){
+
+                                font-family: "poiret";
+                                opacity: 0;
+                                animation: fadeOutAuto 5s linear 11s forwards;
+
+                        }
+
+                }
+
+        }
+
+}
+
+.mainContact{
+
+        section {
+
+                svg {
+
+                        path, circle {
+
+                                stroke: $contactColor;
+
+                        }
+
+                        text{
+
+                                stroke: $contactColor;
+
+                        }  
+
+                        image {
+
+                                fill: $contactColor;
+
+                        }    
+
+                }
+
+                article {
+
+                        position: absolute;
+                        top: 50%;
+                        left: 42%;
+
+                        form {
+
+                                display : flex;
+                                flex-direction: column;
+
+                        }
+
+                }                   
+
+        }
+
+}
