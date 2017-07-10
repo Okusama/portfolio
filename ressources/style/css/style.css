@@ -349,10 +349,12 @@ a {
 .mainContact section article {
   position: absolute;
   top: 22%;
-  left: 27%; }
+  left: 32%; }
   .mainContact section article form {
     display: flex;
     flex-direction: column; }
+    .mainContact section article form textarea {
+      resize: none; }
     .mainContact section article form input, .mainContact section article form textarea, .mainContact section article form button, .mainContact section article form label {
       margin: 10px; }
     .mainContact section article form label, .mainContact section article form button {

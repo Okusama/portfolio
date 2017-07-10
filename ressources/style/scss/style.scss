@@ -572,12 +572,18 @@ a {
 
                         position: absolute;
                         top: 22%;
-                        left: 27%;
+                        left: 32%;
 
                         form {
 
                                 display : flex;
                                 flex-direction: column;
+
+                                textarea {
+
+                                        resize:none;
+
+                                }
 
                                 input, textarea, button, label {
 
