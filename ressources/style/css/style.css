@@ -362,6 +362,7 @@ a {
     .mainContact section article form input, .mainContact section article form textarea, .mainContact section article form button {
       background-color: rgba(255, 255, 255, 0);
       border: 1px solid #FFB41D;
+      font-family: "poiret";
       font-size: 2rem; }
     .mainContact section article form input, .mainContact section article form textarea {
       color: white; }
