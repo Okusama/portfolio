@@ -13,8 +13,8 @@ $welcomeColorNeon:#BFB0B0;
 $presentationColor: #FE4F00;
 $presentationColorNeon: rgba(255, 146, 97, 0.4);
 $presentationColorText: #FF9261;
-$makingColor: #D9A4FC;
-$makingColorNeon: rgba(229, 194, 252, 0.4);
+$realisationColor: #D9A4FC;
+$realisationColorNeon: rgba(229, 194, 252, 0.4);
 $projectsColor: #FE003E;
 $projectsColorNeon: rgba(254, 142, 170, 0.4);
 $contactColor: #FFB41D;
@@ -291,20 +291,20 @@ a {
 
                 path{
 
-                        stroke: $makingColor;
+                        stroke: $realisationColor;
 
                 }
 
                 >:hover{
 
-                        box-shadow: 0 0 30px $makingColorNeon, inset 0 0 30px $makingColorNeon;
-                        text-shadow: 0 0 50px $makingColorNeon;
+                        box-shadow: 0 0 30px $realisationColorNeon, inset 0 0 30px $realisationColorNeon;
+                        text-shadow: 0 0 50px $realisationColorNeon;
 
                         animation: flash 0.8s linear forwards;
 
                         text{
 
-                                fill: $makingColor;
+                                fill: $realisationColor;
 
                         }
 
@@ -373,7 +373,7 @@ a {
 
 /*Global of Presentation, Contact, Realisation and Project*/
 
-.mainPresentation, .mainContact {
+.mainPresentation, .mainContact, .mainRealisation {
 
         section {
 
@@ -399,7 +399,7 @@ a {
 
                         }
 
-                        >:first-child{
+                        >:first-child {
 
                                 stroke-dasharray: 4500;
                                 stroke-dashoffset: 4500;
@@ -409,7 +409,7 @@ a {
 
                         }
 
-                        >:nth-child(2){
+                        >:nth-child(2) {
 
                                 opacity: 0;
                                 font-family: "futur";
@@ -536,6 +536,8 @@ a {
 
 }
 
+/*Contact page*/
+
 .mainContact{
 
         section {
@@ -551,6 +553,14 @@ a {
                         image {
 
                                 fill: $contactColor;
+
+                        }
+
+                        >text:nth-of-type(2), >text:nth-of-type(3){
+
+                                font-size: 2rem;
+                                font-family:"poiret";
+                                opacity: 0;
 
                         }
 
@@ -647,8 +657,6 @@ a {
                                 stroke: $realisationColor;
 
                         }
-
-
 
                 }
 
