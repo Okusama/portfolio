@@ -1,375 +1,101 @@
-@charset "UTF-8";
-/*Font import*/
-@font-face {
-  font-family: "futur";
-  src: url("../fonts/Clip.eot?") format("eot"), url("../fonts/Clip.woff2") format("woff2"), url("../fonts/Clip.woff") format("woff"), url("../fonts/Clip.ttf") format("truetype"), url("../fonts/Clip.svg#futur") format("svg"); }
-@font-face {
-  font-family: "quicksand";
-  src: url("../fonts/Quicksand-Regular.eot?") format("eot"), url("../fonts/Quicksand-Regular.woff2") format("woff2"), url("../fonts/Quicksand-Regular.woff") format("woff"), url("../fonts/Quicksand-Regular.ttf") format("truetype"), url("../fonts/Quicksand-Regular.svg#quicksand") format("svg"); }
-@font-face {
-  font-family: "poiret";
-  src: url("../fonts/PoiretOne-Regular.eot?") format("eot"), url("../fonts/PoiretOne-Regular.woff2") format("woff2"), url("../fonts/PoiretOne-Regular.woff") format("woff"), url("../fonts/PoiretOne-Regular.ttf") format("truetype"), url("../fonts/PoiretOne-Regular.svg#poiret") format("svg"); }
-/*Color variable*/
-/*** Keyframes ***/
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0; } }
-@keyframes show {
-  0% {
-    opacity: 0;
-    stroke: #d6c9c9; }
-  25% {
-    opacity: .2; }
-  50% {
-    opacity: .5; }
-  75% {
-    opacity: .8; }
-  100% {
-    opacity: 0.9;
-    stroke: #d6c9c9; } }
-@keyframes welcomeFlash {
-  0% {
-    opacity: .1;
-    box-shadow: 0 0 30px #BFB0B0, inset 0 0 30px #BFB0B0;
-    text-shadow: 0 0 80px #BFB0B0; }
-  4% {
-    opacity: 1; }
-  8% {
-    opacity: .4; }
-  12% {
-    opacity: .1; }
-  16% {
-    opacity: .5; }
-  20% {
-    opacity: 1; }
-  24% {
-    opacity: .4; }
-  28% {
-    opacity: .1; }
-  32% {
-    opacity: .6; }
-  36% {
-    opacity: 1; }
-  40% {
-    opacity: .7; }
-  44% {
-    opacity: .2; }
-  48% {
-    opacity: .1; }
-  52% {
-    opacity: .4; }
-  56% {
-    opacity: .9; }
-  60% {
-    opacity: .2; }
-  64% {
-    opacity: 1; }
-  68% {
-    opacity: .4; }
-  72% {
-    opacity: .1; }
-  76% {
-    opacity: .5; }
-  80% {
-    opacity: .7; }
-  84% {
-    opacity: .9; }
-  88% {
-    opacity: .6; }
-  92% {
-    opacity: .8; }
-  96% {
-    opacity: .2; }
-  100% {
-    opacity: 0.9;
-    box-shadow: 0 0 30px #BFB0B0, inset 0 0 30px #BFB0B0;
-    text-shadow: 0 0 80px #BFB0B0; } }
-@keyframes flash {
-  0% {
-    opacity: .1; }
-  4% {
-    opacity: 1; }
-  8% {
-    opacity: .4; }
-  12% {
-    opacity: .1; }
-  16% {
-    opacity: .5; }
-  20% {
-    opacity: 1; }
-  24% {
-    opacity: .4; }
-  28% {
-    opacity: .1; }
-  32% {
-    opacity: .6; }
-  36% {
-    opacity: 1; }
-  40% {
-    opacity: .7; }
-  44% {
-    opacity: .2; }
-  48% {
-    opacity: .1; }
-  52% {
-    opacity: .4; }
-  56% {
-    opacity: .9; }
-  60% {
-    opacity: .2; }
-  64% {
-    opacity: 1; }
-  68% {
-    opacity: .4; }
-  72% {
-    opacity: .1; }
-  76% {
-    opacity: .5; }
-  80% {
-    opacity: .7; }
-  84% {
-    opacity: .9; }
-  88% {
-    opacity: .6; }
-  92% {
-    opacity: .8; }
-  96% {
-    opacity: .2; }
-  100% {
-    opacity: 0.9; } }
-@keyframes fadeOutAuto {
-  0% {
-    opacity: 0; }
-  25% {
-    opacity: 0.25; }
-  50% {
-    opacity: 0.5; }
-  75% {
-    opacity: 0.75; }
-  100% {
-    opacity: 0.9; } }
-@keyframes credit {
-  0% {
-    top: 100%;
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    20% {
-      top: 20%; }
-    opacity: 1; } }
-/****** G├®n├®ral******/
-* {
-  box-sizing: border-box;
-  transition: all 0.3s linear 0s; }
+/*
+Error: Undefined variable: "$realisationColor".
+        on line 647 of scss/style.scss
 
-html {
-  font-size: 62.5%; }
+642: 
+643:                 svg {
+644: 
+645:                         path, circle, text{
+646: 
+647:                                 stroke: $realisationColor;
+648: 
+649:                         }
+650: 
+651: 
+652: 
 
-body {
-  background-image: url("../img/burried.png");
-  margin: 0 auto; }
-
-text {
-  text-anchor: middle; }
-
-a {
-  text-decoration: none; }
-
-/*Welcome Page*/
-.mainWelcome section {
-  text-align: center;
-  width: 45%;
-  margin-top: 30vh;
-  margin-left: 28vw;
-  animation: welcomeFlash 2s linear 5s forwards; }
-.mainWelcome path {
-  stroke: #d6c9c9;
-  stroke-width: 2px;
-  fill-opacity: 0;
-  fill: none;
-  stroke-dasharray: 2600;
-  stroke-dashoffset: 2600;
-  animation-direction: normal;
-  animation: draw 5s linear forwards; }
-.mainWelcome text {
-  fill: #16161D;
-  font-family: "futur";
-  font-size: 4rem;
-  animation: show 2s linear 5s forwards; }
-
-/*Home Page*/
-.mainHome {
-  /*Flex for section*/
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  /*Global property for the path SVG*/
-  /*Global property for text SVG*/
-  /*Presentation Section*/
-  /*Realisation Section*/
-  /*Project section*/
-  /*Contact Section*/ }
-  .mainHome section {
-    margin: 30px; }
-  .mainHome path {
-    stroke-width: 2px;
-    fill-opacity: 0;
-    fill: none;
-    stroke-dasharray: 2520;
-    stroke-dashoffset: 2520;
-    animation-direction: normal;
-    animation: draw 5s linear forwards; }
-  .mainHome text {
-    font-family: "futur";
-    font-size: 4rem;
-    fill: black; }
-  .mainHome > :first-child {
-    width: 45%; }
-    .mainHome > :first-child path {
-      stroke: #FE4F00; }
-    .mainHome > :first-child > :hover {
-      box-shadow: 0 0 30px rgba(255, 146, 97, 0.4), inset 0 0 30px rgba(255, 146, 97, 0.4);
-      text-shadow: 0 0 80px rgba(255, 146, 97, 0.4);
-      animation: flash 0.8s linear forwards; }
-      .mainHome > :first-child > :hover text {
-        fill: #FF9261; }
-  .mainHome > :nth-child(2) {
-    width: 45%; }
-    .mainHome > :nth-child(2) path {
-      stroke: #D9A4FC; }
-    .mainHome > :nth-child(2) > :hover {
-      box-shadow: 0 0 30px rgba(229, 194, 252, 0.4), inset 0 0 30px rgba(229, 194, 252, 0.4);
-      text-shadow: 0 0 50px rgba(229, 194, 252, 0.4);
-      animation: flash 0.8s linear forwards; }
-      .mainHome > :nth-child(2) > :hover text {
-        fill: #D9A4FC; }
-  .mainHome > :nth-child(3) {
-    width: 45%; }
-    .mainHome > :nth-child(3) path {
-      stroke: #FE003E; }
-    .mainHome > :nth-child(3) > :hover {
-      box-shadow: 0 0 30px rgba(254, 142, 170, 0.4), inset 0 0 30px rgba(254, 142, 170, 0.4);
-      text-shadow: 0 0 50px rgba(254, 142, 170, 0.4);
-      animation: flash 0.8s linear forwards; }
-      .mainHome > :nth-child(3) > :hover text {
-        fill: #FE003E; }
-  .mainHome > :last-child {
-    width: 45%; }
-    .mainHome > :last-child path {
-      stroke: #FFB41D; }
-    .mainHome > :last-child > :hover {
-      box-shadow: 0 0 30px rgba(255, 202, 94, 0.4), inset 0 0 30px rgba(255, 202, 94, 0.4);
-      text-shadow: 0 0 50px rgba(255, 202, 94, 0.4);
-      animation: flash 0.8s linear forwards; }
-      .mainHome > :last-child > :hover text {
-        fill: #FFB41D; }
-
-/*Global of Presentation, Contact, Realisation and Project*/
-.mainPresentation section, .mainContact section {
-  margin-left: 5vw;
-  margin-top: 5vh;
-  width: 90%; }
-  .mainPresentation section svg path, .mainPresentation section svg circle, .mainContact section svg path, .mainContact section svg circle {
-    stroke-width: 2px;
-    fill-opacity: 0;
-    fill: none; }
-  .mainPresentation section svg circle, .mainContact section svg circle {
-    opacity: 0;
-    animation-direction: normal;
-    animation: fadeOutAuto 5s linear 2s forwards, draw 5s linear 3s forwards; }
-  .mainPresentation section svg > :first-child, .mainContact section svg > :first-child {
-    stroke-dasharray: 4500;
-    stroke-dashoffset: 4500;
-    animation-direction: normal;
-    animation: draw 8s linear forwards; }
-  .mainPresentation section svg > :nth-child(2), .mainContact section svg > :nth-child(2) {
-    opacity: 0;
-    font-family: "futur";
-    font-size: 3rem;
-    animation: fadeOutAuto 5s linear 5s forwards; }
-  .mainPresentation section svg a, .mainContact section svg a {
-    opacity: 0;
-    animation: fadeOutAuto 5s linear 5s forwards; }
-
-/*Presentation page*/
-.mainPresentation section svg path, .mainPresentation section svg circle {
-  stroke: #FE4F00; }
-.mainPresentation section svg text {
-  stroke: #FE4F00; }
-.mainPresentation section svg .languages {
-  opacity: 0;
-  font-family: "quicksand";
-  font-size: 2.5rem;
-  animation: fadeOutAuto 5s linear 6s forwards; }
-.mainPresentation section svg circle:nth-of-type(1) {
-  stroke-dasharray: 453;
-  stroke-dashoffset: 453; }
-.mainPresentation section svg circle:nth-of-type(2) {
-  stroke-dasharray: 396;
-  stroke-dashoffset: 396; }
-.mainPresentation section svg circle:nth-of-type(3) {
-  stroke-dasharray: 340;
-  stroke-dashoffset: 340; }
-.mainPresentation section svg circle:nth-of-type(4) {
-  stroke-dasharray: 283;
-  stroke-dashoffset: 283; }
-.mainPresentation section svg circle:nth-of-type(5) {
-  stroke-dasharray: 283;
-  stroke-dashoffset: 283; }
-.mainPresentation section svg > path:nth-of-type(2) {
-  opacity: 0;
-  stroke-dasharray: 1540;
-  stroke-dashoffset: 1540;
-  animation-direction: normal;
-  animation: fadeOutAuto 5s linear 5s forwards, draw 4s linear 8s forwards; }
-.mainPresentation section svg > path:nth-of-type(3) {
-  opacity: 0;
-  stroke-dasharray: 450;
-  stroke-dashoffset: 450;
-  animation-direction: normal;
-  animation: fadeOutAuto 5s linear 5s forwards, draw 2s linear 10s forwards; }
-.mainPresentation section svg .textTitlePresentation {
-  font-size: 3rem; }
-.mainPresentation section svg .textPresentation {
-  font-size: 2rem;
-  text-anchor: start; }
-.mainPresentation section svg > :nth-last-child(-n+11) {
-  font-family: "poiret";
-  opacity: 0;
-  animation: fadeOutAuto 5s linear 11s forwards; }
-
-.mainContact section svg path, .mainContact section svg circle {
-  stroke: #FFB41D; }
-.mainContact section svg text {
-  stroke: #FFB41D; }
-.mainContact section svg image {
-  fill: #FFB41D; }
-.mainContact section article {
-  position: absolute;
-  top: 22%;
-  left: 32%; }
-  .mainContact section article form {
-    display: flex;
-    flex-direction: column; }
-    .mainContact section article form textarea {
-      resize: none; }
-    .mainContact section article form input, .mainContact section article form textarea, .mainContact section article form button, .mainContact section article form label {
-      margin: 10px; }
-    .mainContact section article form label, .mainContact section article form button {
-      color: #FFB41D;
-      font-family: "poiret";
-      font-size: 2rem; }
-    .mainContact section article form input, .mainContact section article form textarea, .mainContact section article form button {
-      background-color: rgba(255, 255, 255, 0);
-      border: 1px solid #FFB41D;
-      font-family: "poiret";
-      font-size: 2rem; }
-    .mainContact section article form input, .mainContact section article form textarea {
-      color: white; }
-    .mainContact section article form button {
-      color: #FFB41D;
-      padding: 5px; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+scss/style.scss:647
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/script/tree/node.rb:58:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$realisationColor\".\A         on line 647 of scss/style.scss\A \A 642: \A 643:                 svg {\A 644: \A 645:                         path, circle, text{\A 646: \A 647:                                 stroke: $realisationColor;\A 648: \A 649:                         }\A 650: \A 651: \A 652: "; }

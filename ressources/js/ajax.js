@@ -28,3 +28,9 @@ function ajaxGetHtmlPresentation(reponse) {
         $("#main").html(reponse);
 
 }
+
+function ajaxGetHtmlContact(reponse) {
+
+	$("#main").html(reponse);
+
+}

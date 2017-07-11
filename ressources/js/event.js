@@ -24,3 +24,8 @@ function goToPresentation(){
 
 }
 
+function goToContact(){
+
+	$.get("ressources/template/contact.html", ajaxGetHtmlContact);
+
+}

@@ -5,7 +5,8 @@
 $(document).ready(function(){
 
         applicationLaunch();
-        $("#main").on("click", "#presentation" ,goToPresentation);
         $("#main").on("click", "#returnHome", goToHome);
+        $("#main").on("click", "#presentation", goToPresentation);
+        $("#main").on("click", "#contact", goToContact);
 
 });
