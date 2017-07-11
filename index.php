@@ -1,7 +1,7 @@
 <?php
 
 
-$main = "ressources/template/contact.html";
+$main = "ressources/template/realisation.phtml";
 include "ressources/view/layout.phtml";
 
 include_once "src/request.php";
