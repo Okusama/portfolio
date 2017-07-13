@@ -34,3 +34,9 @@ function ajaxGetHtmlContact(reponse) {
 	$("#main").html(reponse);
 
 }
+
+function ajaxGetHtmlRealisation(reponse){
+
+	$("#main").html(reponse);
+
+}

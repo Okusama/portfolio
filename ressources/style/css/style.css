@@ -384,5 +384,8 @@ a {
 /* Realisation page */
 .mainRealisation section svg path, .mainRealisation section svg circle, .mainRealisation section svg text {
   stroke: #D9A4FC; }
+.mainRealisation section svg text:nth-of-type(2), .mainRealisation section svg text:nth-of-type(3) {
+  font-family: "poiret";
+  font-size: 2rem; }
 
 /*# sourceMappingURL=style.css.map */

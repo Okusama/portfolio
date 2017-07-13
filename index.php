@@ -1,8 +1,8 @@
 <?php
 
 
-$main = "ressources/template/contact.html";
-include "ressources/view/layout.phtml";
+$main = "ressources/template/public/realisation.phtml";
+include_once "ressources/view/layout.phtml";
 
 include_once "src/request.php";
 

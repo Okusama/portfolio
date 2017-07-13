@@ -9,5 +9,6 @@ $(document).ready(function(){
         $("#main").on("click", "#presentation", goToPresentation);
         $("#main").on("click", "#contact", goToContact);
         $("#discord").on("click", addToClipBoard);
+        $("#main").on("click", "#realisation", goToRealisation);
 
 });

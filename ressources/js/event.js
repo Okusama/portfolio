@@ -5,7 +5,7 @@
  */
 function start(){
 
-        $.get("ressources/template/welcome.html", ajaxGetHtmlWelcome)
+        $.get("ressources/template/public/welcome.html", ajaxGetHtmlWelcome)
 
 }
 
@@ -14,18 +14,24 @@ function start(){
  */
 function goToHome(){
 
-        $.get("ressources/template/home.html", ajaxGetHtmlHome);
+        $.get("ressources/template/public/home.html", ajaxGetHtmlHome);
 
 }
 
 function goToPresentation(){
 
-        $.get("ressources/template/presentation.html", ajaxGetHtmlPresentation);
+        $.get("ressources/template/public/presentation.html", ajaxGetHtmlPresentation);
 
 }
 
 function goToContact(){
 
-	$.get("ressources/template/contact.html", ajaxGetHtmlContact);
+	$.get("ressources/template/public/contact.html", ajaxGetHtmlContact);
+
+}
+
+function goToRealisation(){
+
+	$.get("ressources/template/public/realisation.phtml", ajaxGetHtmlRealisation);
 
 }
