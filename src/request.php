@@ -25,3 +25,14 @@ function getMessage($db){
         $display = $query->fetchAll(PDO::FETCH_ASSOC);
 
 }
+
+function saveRealisation($db, $name, $urlImage, $description, $urlLink){
+
+        $sources = 
+                " INSERT INTO `realisation`(`name`, `image`, `description`, `lien`)
+                VALUES (?, ?, ?, ?)";
+
+        $query = $db->prepare($sources);
+        $query->execute([$name, $urlImage, $description, $urlLink]);
+
+}
