@@ -267,29 +267,29 @@ a {
         fill: #FFB41D; }
 
 /*Global of Presentation, Contact, Realisation and Project*/
-.mainPresentation section, .mainContact section, .mainRealisation section {
+.mainPresentation section, .mainContact section, .mainRealisation section, .mainProject section {
   margin-left: 5vw;
   margin-top: 5vh;
   width: 90%; }
-  .mainPresentation section svg path, .mainPresentation section svg circle, .mainContact section svg path, .mainContact section svg circle, .mainRealisation section svg path, .mainRealisation section svg circle {
+  .mainPresentation section svg path, .mainPresentation section svg circle, .mainContact section svg path, .mainContact section svg circle, .mainRealisation section svg path, .mainRealisation section svg circle, .mainProject section svg path, .mainProject section svg circle {
     stroke-width: 2px;
     fill-opacity: 0;
     fill: none; }
-  .mainPresentation section svg circle, .mainContact section svg circle, .mainRealisation section svg circle {
+  .mainPresentation section svg circle, .mainContact section svg circle, .mainRealisation section svg circle, .mainProject section svg circle {
     opacity: 0;
     animation-direction: normal;
     animation: fadeOutAuto 5s linear 2s forwards, draw 5s linear 3s forwards; }
-  .mainPresentation section svg > :first-child, .mainContact section svg > :first-child, .mainRealisation section svg > :first-child {
+  .mainPresentation section svg > :first-child, .mainContact section svg > :first-child, .mainRealisation section svg > :first-child, .mainProject section svg > :first-child {
     stroke-dasharray: 4500;
     stroke-dashoffset: 4500;
     animation-direction: normal;
     animation: draw 8s linear forwards; }
-  .mainPresentation section svg > :nth-child(2), .mainContact section svg > :nth-child(2), .mainRealisation section svg > :nth-child(2) {
+  .mainPresentation section svg > :nth-child(2), .mainContact section svg > :nth-child(2), .mainRealisation section svg > :nth-child(2), .mainProject section svg > :nth-child(2) {
     opacity: 0;
     font-family: "futur";
     font-size: 3rem;
     animation: fadeOutAuto 5s linear 5s forwards; }
-  .mainPresentation section svg a, .mainContact section svg a, .mainRealisation section svg a {
+  .mainPresentation section svg a, .mainContact section svg a, .mainRealisation section svg a, .mainProject section svg a {
     opacity: 0;
     animation: fadeOutAuto 5s linear 5s forwards; }
 
@@ -385,7 +385,18 @@ a {
 .mainRealisation section svg path, .mainRealisation section svg circle, .mainRealisation section svg text {
   stroke: #D9A4FC; }
 .mainRealisation section svg text:nth-of-type(2), .mainRealisation section svg text:nth-of-type(3) {
+  opacity: 0;
   font-family: "poiret";
-  font-size: 2rem; }
+  font-size: 2rem;
+  animation: fadeOutAuto 5s linear 5s forwards; }
+
+/* Project Page */
+.mainProject section svg path, .mainProject section svg circle, .mainProject section svg text {
+  stroke: #FE003E; }
+.mainProject section svg text:nth-of-type(2), .mainProject section svg text:nth-of-type(3) {
+  opacity: 0;
+  font-family: "poiret";
+  font-size: 2rem;
+  animation: fadeOutAuto 5s linear 5s forwards; }
 
 /*# sourceMappingURL=style.css.map */

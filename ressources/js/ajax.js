@@ -40,3 +40,9 @@ function ajaxGetHtmlRealisation(reponse){
 	$("#main").html(reponse);
 
 }
+
+function ajaxGetHtmlProject(reponse){
+
+	$("#main").html(reponse);
+
+}

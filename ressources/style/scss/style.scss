@@ -373,7 +373,7 @@ a {
 
 /*Global of Presentation, Contact, Realisation and Project*/
 
-.mainPresentation, .mainContact, .mainRealisation {
+.mainPresentation, .mainContact, .mainRealisation, .mainProject {
 
         section {
 
@@ -660,8 +660,39 @@ a {
 
                         text:nth-of-type(2), text:nth-of-type(3){
 
+                                opacity: 0;
                                 font-family: "poiret";
                                 font-size: 2rem;
+                                animation: fadeOutAuto 5s linear 5s forwards;
+
+                        }
+
+                }
+
+        }
+
+}
+
+/* Project Page */
+
+.mainProject {
+
+        section {
+
+                svg {
+
+                        path, circle, text{
+
+                                stroke: $projectsColor;
+
+                        }
+
+                        text:nth-of-type(2), text:nth-of-type(3){
+
+                                opacity: 0;
+                                font-family: "poiret";
+                                font-size: 2rem;
+                                animation: fadeOutAuto 5s linear 5s forwards;
 
                         }
 

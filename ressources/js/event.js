@@ -35,3 +35,9 @@ function goToRealisation(){
 	$.get("ressources/template/public/realisation.phtml", ajaxGetHtmlRealisation);
 
 }
+
+function goToProject(){
+
+	$.get("ressources/template/public/project.phtml", ajaxGetHtmlProject);
+
+}
