@@ -26,13 +26,26 @@ function getMessage($db){
 
 }
 
-function saveRealisation($db, $name, $urlImage, $description, $urlLink){
+function saveRealisation($db, $name, $description, $urlLink){
 
         $sources = 
-                " INSERT INTO `realisation`(`name`, `image`, `description`, `lien`)
-                VALUES (?, ?, ?, ?)";
+                " INSERT INTO `realisation`(`name`, `description`, `lien`)
+                VALUES (?, ?, ?)";
 
         $query = $db->prepare($sources);
-        $query->execute([$name, $urlImage, $description, $urlLink]);
+        $query->execute([$name, $description, $urlLink]);
+
+}
+
+function getRealisation($db){
+
+        $sources = 
+                " SELECT `name`, `description`, `urlLink`
+                FROM `realisation`";
+
+        $query = $db->prepare($sources);
+        $query->execute();
+
+        $display = $query->fetchAll(PDO::FETCH_ASSOC);
 
 }
