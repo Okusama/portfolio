@@ -224,9 +224,22 @@ a {
         justify-content: center;
         flex-wrap: wrap;
 
+        @media screen and (orientation: portrait){
+
+                flex-direction: column;
+
+        }
+
         section{
 
                 margin: 30px;
+
+                @media screen and (max-width: 1024px) and (orientation: portrait){
+
+                        margin-left: 15vw;
+                        width: 150%;
+
+                }
 
         }
 

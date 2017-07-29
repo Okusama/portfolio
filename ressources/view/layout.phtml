@@ -12,6 +12,13 @@
                 <script type="text/javascript" src="ressources/js/utilities.js"></script>
         </head>
         <body>
+                <?php
+                if (isset($page)) {
+
+                        require_once "controllers/".$page.".php";
+
+                }
+                ?>
                 <main id="main"></main>
                 <script type="text/javascript" src="ressources/js/main.js"></script>
         </body>

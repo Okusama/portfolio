@@ -1,20 +1,37 @@
 <?php
 
+session_start();
 
+require_once "src/request.php";
+require_once "controllers/contact.php";
 
-$main = "ressources/template/public/realisation.phtml";
-include_once "ressources/view/layout.phtml";
+$accessAdmin = ["admin"];
 
-include_once "src/request.php";
+if(isset($_GET["admin"])) {
 
-$name = htmlspecialchars($_POST["name"]);
-$mail = htmlspecialchars($_POST["mail"]);
-$object = htmlspecialchars($_POST["object"]);
-$message = htmlspecialchars($_POST["message"]);
+	$page = "login";
 
+	if(isset($_SESSION["admin"])) {
 
-if (isset($_POST["send"])){
+		if(in_array($_GET["admin"], $accessAdmin)) {
 
-        saveMessage($db, $name, $mail, $object, $message);
+			$page = $_GET["admin"];
+			session_destroy();
+
+		}
+
+	}
 
 }
+
+if(isset($_POST["action"])) {
+
+	if($_POST["action"] === "login") {
+
+		require_once "controllers/connexion_user.php";
+
+	}
+
+}
+
+require_once "ressources/view/layout.phtml";

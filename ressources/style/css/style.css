@@ -211,8 +211,15 @@ a {
   /*Realisation Section*/
   /*Project section*/
   /*Contact Section*/ }
+  @media screen and (orientation: portrait) {
+    .mainHome {
+      flex-direction: column; } }
   .mainHome section {
     margin: 30px; }
+    @media screen and (max-width: 1024px) and (orientation: portrait) {
+      .mainHome section {
+        margin-left: 15vw;
+        width: 150%; } }
   .mainHome path {
     stroke-width: 2px;
     fill-opacity: 0;
