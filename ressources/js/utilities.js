@@ -1,5 +1,6 @@
 'use strict';
 
+var state;
 /**
  * [Lancement de la page d'acceuil puis du menu]
  */
@@ -21,5 +22,47 @@ function addToClipBoard(){
 
 	NAMETAG.select();
 	document.execCommand("copy");
+
+}
+
+function pageState(){
+
+	if (performance.navigation.type == 1){
+
+		switch (state){
+
+			case "home":
+
+				goToHome();
+
+			break;
+
+			case "presentation":
+
+				goToPresentation();
+
+			break;
+
+			case "realisation":
+
+				goToRealisation();
+
+			break;
+
+			case "project":
+
+				goToProject();
+
+			break;
+
+			case "contact":
+
+				goToContact();
+
+			break;
+
+		}
+
+	}
 
 }

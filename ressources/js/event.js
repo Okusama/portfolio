@@ -13,7 +13,7 @@ function start(){
  * [Requête de la page home]
  */
 function goToHome(){
-
+	
         $.get("ressources/template/public/home.html", ajaxGetHtmlHome);
 
 }

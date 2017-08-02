@@ -8,9 +8,10 @@ $(document).ready(function(){
         $("#main").on("click", "#returnHome", goToHome);
         $("#main").on("click", "#presentation", goToPresentation);
         $("#main").on("click", "#contact", goToContact);
-        $("#discord").on("click", addToClipBoard);
         $("#main").on("click", "#realisation", goToRealisation);
         $("#main").on("click", "#discord", addToClipBoard);
         $("#main").on("click", "#project", goToProject);
+        pageState();
 
 });
+

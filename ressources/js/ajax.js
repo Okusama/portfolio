@@ -18,18 +18,26 @@ function ajaxGetHtmlWelcome(reponse) {
  */
 function ajaxGetHtmlHome(reponse) {
 
+
         $("#main").html(reponse)
-                .fadeIn(1);
+                .fadeIn(1)
+                .attr("data-indice", "home");
+
+	
 
 }
 
 function ajaxGetHtmlPresentation(reponse) {
+
+	var state = "presentation"
 
         $("#main").html(reponse);
 
 }
 
 function ajaxGetHtmlContact(reponse) {
+
+	var state = "contact"
 
 	$("#main").html(reponse);
         $('#formContact button[name="send"]').on('click', function(e){
@@ -41,11 +49,15 @@ function ajaxGetHtmlContact(reponse) {
 
 function ajaxGetHtmlRealisation(reponse){
 
+	var state = "realisation"
+
 	$("#main").html(reponse);
 
 }
 
 function ajaxGetHtmlProject(reponse){
+
+	var state = "project"
 
 	$("#main").html(reponse);
 
