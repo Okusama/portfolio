@@ -32,6 +32,10 @@ function ajaxGetHtmlPresentation(reponse) {
 function ajaxGetHtmlContact(reponse) {
 
 	$("#main").html(reponse);
+        $('#formContact button[name="send"]').on('click', function(e){
+            e.preventDefault();
+        });
+
 
 }
 

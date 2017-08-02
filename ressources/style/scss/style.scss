@@ -144,27 +144,27 @@ $contactColorNeon: rgba(255, 202, 94, 0.4);
 
 /****** Général******/
 
-*{
+* {
 
         box-sizing: border-box;
         transition: all 0.3s linear 0s;
 
 }
 
-html{
+html {
 
         font-size: 62.5%;
 
 }
 
-body{
+body {
 
         background-image: url("../img/burried.png");
         margin: 0 auto;
 
 }
 
-text{
+text {
 
         text-anchor: middle;
 

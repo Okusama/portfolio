@@ -42,7 +42,7 @@ function saveRealisation($db, $name, $description, $urlLink){
 function getRealisation($db){
 
         $sources =
-                "SELECT `name`, `description`, `urlLink`
+                "SELECT `name`, `description`, `lien`
                 FROM `realisation`";
 
         $query = $db->prepare($sources);

@@ -16,7 +16,6 @@ if(isset($_GET["admin"])) {
 		if(in_array($_GET["admin"], $accessAdmin)) {
 
 			$page = $_GET["admin"];
-			session_destroy();
 
 		}
 
@@ -33,5 +32,7 @@ if(isset($_POST["action"])) {
 	}
 
 }
+
+$realisation = getRealisation($db);
 
 require_once "ressources/view/layout.phtml";
