@@ -355,17 +355,15 @@ a {
   font-family: "poiret";
   opacity: 0; }
 .mainContact section article {
-  position: absolute;
-  top: 22%;
-  left: 32%; }
-  @media screen and (max-width: 1600px) {
-    .mainContact section article {
-      top: 20%; } }
+  text-align: center; }
   .mainContact section article form {
+    margin-top: 5vh;
+    margin-left: 12vw;
+    width: 70%;
     opacity: 0;
     display: flex;
     flex-direction: column;
-    animation: fadeOutAuto 5s linear 7s forwards; }
+    animation: fadeOutAuto 5s linear 5s forwards; }
     @media screen and (max-width: 1600px) {
       .mainContact section article form {
         width: 80%; } }

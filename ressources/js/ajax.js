@@ -20,16 +20,13 @@ function ajaxGetHtmlHome(reponse) {
 
 
         $("#main").html(reponse)
-                .fadeIn(1)
-                .attr("data-indice", "home");
+                .fadeIn(1);
 
-	
+
 
 }
 
 function ajaxGetHtmlPresentation(reponse) {
-
-	var state = "presentation"
 
         $("#main").html(reponse);
 
@@ -37,27 +34,33 @@ function ajaxGetHtmlPresentation(reponse) {
 
 function ajaxGetHtmlContact(reponse) {
 
-	var state = "contact"
-
 	$("#main").html(reponse);
-        $('#formContact button[name="send"]').on('click', function(e){
-            e.preventDefault();
-        });
+        $("#formContact").submit(function(event){
 
+                event.preventDefault();
+
+                $.post("index.php", $("#formContact").serialize(), function(data){
+
+                        window.alert("succès");
+
+                })
+                .fail(function(){
+
+                        window.alert("erreur");
+
+                });
+
+        });
 
 }
 
 function ajaxGetHtmlRealisation(reponse){
-
-	var state = "realisation"
 
 	$("#main").html(reponse);
 
 }
 
 function ajaxGetHtmlProject(reponse){
-
-	var state = "project"
 
 	$("#main").html(reponse);
 

@@ -1,6 +1,8 @@
 <?php
 if (isset($_POST["name"], $_POST["mail"], $_POST["object"], $_POST["message"])){
 
+        print_r($_POST);
+
         $name = htmlspecialchars($_POST["name"]);
         $mail = htmlspecialchars($_POST["mail"]);
         $object = htmlspecialchars($_POST["object"]);
