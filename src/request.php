@@ -39,21 +39,6 @@ function saveRealisation($db, $name, $description, $urlLink){
 
 }
 
-function getRealisation($db){
-
-        $sources =
-                "SELECT `name`, `description`, `lien`
-                FROM `realisation`";
-
-        $query = $db->prepare($sources);
-        $query->execute();
-
-        $display = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        return $display;
-
-}
-
 
 function connectAdmin($db, $pseudo, $password){
 

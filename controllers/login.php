@@ -1,1 +1,1 @@
-<?php require "ressources/view/login.phtml" ?>
+<?php require_once "ressources/view/login.phtml" ?>

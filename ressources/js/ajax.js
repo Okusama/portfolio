@@ -41,12 +41,13 @@ function ajaxGetHtmlContact(reponse) {
 
                 $.post("index.php", $("#formContact").serialize(), function(data){
 
-                        window.alert("succès");
+                        $("#formMessage").html("Le message a bien été envoyé");
+                        $("input, textarea").val("");
 
                 })
                 .fail(function(){
 
-                        window.alert("erreur");
+                        $("#formMessage").html("Une erreur est survenue");
 
                 });
 

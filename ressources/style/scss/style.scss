@@ -583,10 +583,18 @@ a {
 
                         text-align: center;
 
+                        p {
+
+                                font-family: "poiret";
+                                font-size: 2rem;
+                                color: $contactColor;
+
+                        }
+
                         form {
 
                                 margin-top: 5vh;
-                                margin-left: 12vw;
+                                margin-left: 14vw;
                                 width: 70%;
                                 opacity: 0;
                                 display : flex;

@@ -13,12 +13,6 @@
 		</svg>
 	</section>
 	<section>
-		<?php foreach ($realisation as $i) { ?>
-
-				<img src="<?= $i['lien'] ?>" alt="">
-				<p><?= $i["name"] ?></p>
-				<p><?= $i["description"] ?></p>
-
-		<?php } ?>
+		
 	</section>
 </section>

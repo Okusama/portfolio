@@ -11,7 +11,5 @@ $(document).ready(function(){
         $("#main").on("click", "#realisation", goToRealisation);
         $("#main").on("click", "#discord", addToClipBoard);
         $("#main").on("click", "#project", goToProject);
-        pageState();
 
 });
-

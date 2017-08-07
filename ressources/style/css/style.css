@@ -356,9 +356,13 @@ a {
   opacity: 0; }
 .mainContact section article {
   text-align: center; }
+  .mainContact section article p {
+    font-family: "poiret";
+    font-size: 2rem;
+    color: #FFB41D; }
   .mainContact section article form {
     margin-top: 5vh;
-    margin-left: 12vw;
+    margin-left: 14vw;
     width: 70%;
     opacity: 0;
     display: flex;

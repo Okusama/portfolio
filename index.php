@@ -35,6 +35,4 @@ if(isset($_POST["action"])) {
 
 }
 
-$realisation = getRealisation($db);
-
 require_once "ressources/view/layout.phtml";
