@@ -11,6 +11,29 @@ function applicationLaunch(){
 
 }
 
+function displayRealisation(){
+
+        goToRealisation();
+        window.setTimeout(getPersoRealisation, 6000);
+
+}
+
+function onClickPersoRealisation(){
+
+        $("#persoRealisation path").toggleClass("hidden");
+        $("#coRealisation path").toggleClass("hidden");
+        getPersoRealisation();
+
+}
+
+function onClickCoRealisation(){
+
+        $("#coRealisation path").toggleClass("hidden");
+        $("#persoRealisation path").toggleClass("hidden");
+        getCoRealisation();
+
+}
+
 function addToClipBoard(){
 
 	$(".copyText").fadeIn(500)

@@ -158,6 +158,10 @@
     20% {
       top: 20%; }
     opacity: 1; } }
+/***** Utilities class *****/
+.hidden {
+  visibility: hidden; }
+
 /****** G├®n├®ral******/
 * {
   box-sizing: border-box;
@@ -391,22 +395,44 @@ a {
       padding: 5px; }
 
 /* Realisation page */
-.mainRealisation section svg path, .mainRealisation section svg circle, .mainRealisation section svg text {
+.mainRealisation :first-child svg path, .mainRealisation :first-child svg circle, .mainRealisation :first-child svg text {
   stroke: #D9A4FC; }
-.mainRealisation section svg text:nth-of-type(2), .mainRealisation section svg text:nth-of-type(3) {
+.mainRealisation :first-child svg a:nth-of-type(2), .mainRealisation :first-child svg a:nth-of-type(3) {
   opacity: 0;
   font-family: "poiret";
   font-size: 2rem;
   animation: fadeOutAuto 5s linear 5s forwards; }
+.mainRealisation :last-child p {
+  font-family: "poiret";
+  font-size: 2rem;
+  color: #D9A4FC;
+  opacity: 0;
+  animation: fadeOutAuto 2s linear 1s forwards; }
+.mainRealisation :last-child article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px dashed #D9A4FC;
+  padding: 10px;
+  opacity: 0;
+  animation: fadeOutAuto 3s linear 1s forwards; }
+  .mainRealisation :last-child article img {
+    width: 50%; }
 
 /* Project Page */
 .mainProject section svg path, .mainProject section svg circle, .mainProject section svg text {
   stroke: #FE003E; }
-.mainProject section svg text:nth-of-type(2), .mainProject section svg text:nth-of-type(3) {
+.mainProject section svg a:nth-of-type(2), .mainProject section svg a:nth-of-type(3) {
   opacity: 0;
   font-family: "poiret";
   font-size: 2rem;
   animation: fadeOutAuto 5s linear 5s forwards; }
+.mainProject :last-child p {
+  font-family: "poiret";
+  font-size: 2rem;
+  color: #FE003E;
+  animation: fadeOutAuto 3s linear 1s forwards; }
 
 /******************* Admin ***********************/
 label, input:nth-of-type(3) {

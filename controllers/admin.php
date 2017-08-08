@@ -1,8 +1,5 @@
 <?php
 
-require_once "src/request.php";
-
-
 $uploadDirection = "ressources/upload/realisation";
 
 if (isset($_FILES["urlImage"])) {

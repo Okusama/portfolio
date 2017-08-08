@@ -8,8 +8,11 @@ $(document).ready(function(){
         $("#main").on("click", "#returnHome", goToHome);
         $("#main").on("click", "#presentation", goToPresentation);
         $("#main").on("click", "#contact", goToContact);
-        $("#main").on("click", "#realisation", goToRealisation);
+        $("#main").on("click", "#realisation", displayRealisation);
+        $("#main").on("click", "#persoRealisation", onClickPersoRealisation);
+        $("#main").on("click", "#coRealisation", onClickCoRealisation);
         $("#main").on("click", "#discord", addToClipBoard);
         $("#main").on("click", "#project", goToProject);
+
 
 });

@@ -32,7 +32,19 @@ function goToContact(){
 
 function goToRealisation(){
 
-	$.get("ressources/template/public/realisation.html.php", ajaxGetHtmlRealisation);
+	$.get("ressources/template/public/realisation.html", ajaxGetHtmlRealisation);
+
+}
+
+function getPersoRealisation(){
+
+        $.get("ressources/template/public/persorealisation.php", ajaxGetHtmlPersoRealisation);
+
+}
+
+function getCoRealisation(){
+
+        $.get("ressources/template/public/corealisation.html", ajaxGetHtmlCoRealisation);
 
 }
 

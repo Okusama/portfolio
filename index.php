@@ -2,6 +2,7 @@
 
 session_start();
 
+require_once "config/connectDB.php";
 require_once "src/request.php";
 require_once "controllers/contact.php";
 

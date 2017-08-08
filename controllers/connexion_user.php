@@ -1,7 +1,5 @@
 <?php
 
-require_once "src/request.php";
-
 if (isset($_POST["pseudo"], $_POST["password"])){
 
         $pseudo = htmlspecialchars($_POST["pseudo"]);

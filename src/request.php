@@ -1,7 +1,5 @@
 <?php
 
-require_once "config/connectDB.php";
-
 function saveMessage($db, $name, $mail, $object, $content){
 
         $sources =
@@ -36,6 +34,21 @@ function saveRealisation($db, $name, $description, $urlLink){
 
         $query = $db->prepare($sources);
         $query->execute([$name, $description, $urlLink]);
+
+}
+
+function getRealisation($db){
+
+        $sources =
+                "SELECT `name`, `description`, `lien`
+                FROM `realisation`";
+
+        $query = $db->prepare($sources);
+        $query->execute();
+
+        $display = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $display;
 
 }
 

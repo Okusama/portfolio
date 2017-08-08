@@ -61,6 +61,18 @@ function ajaxGetHtmlRealisation(reponse){
 
 }
 
+function ajaxGetHtmlPersoRealisation(reponse){
+
+        $("#showRealisation").html(reponse);
+
+}
+
+function ajaxGetHtmlCoRealisation(reponse){
+
+        $("#showRealisation").html(reponse);
+
+}
+
 function ajaxGetHtmlProject(reponse){
 
 	$("#main").html(reponse);
