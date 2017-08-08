@@ -12,7 +12,8 @@ $(document).ready(function(){
         $("#main").on("click", "#persoRealisation", onClickPersoRealisation);
         $("#main").on("click", "#coRealisation", onClickCoRealisation);
         $("#main").on("click", "#discord", addToClipBoard);
-        $("#main").on("click", "#project", goToProject);
-
+        $("#main").on("click", "#projects", displayProjects);
+        $("#main").on("click", "#nowProjects", onClickNowProjects);
+        $("#main").on("click", "#futurProjects", onClickFuturProjects);
 
 });

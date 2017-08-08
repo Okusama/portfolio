@@ -48,8 +48,20 @@ function getCoRealisation(){
 
 }
 
-function goToProject(){
+function goToProjects(){
 
-	$.get("ressources/template/public/project.phtml", ajaxGetHtmlProject);
+	$.get("ressources/template/public/projects.html", ajaxGetHtmlProjects);
+
+}
+
+function getNowProjects(){
+
+        $.get("ressources/template/public/nowprojects.html", ajaxGetHtmlNowProjects);
+
+}
+
+function getFuturProjects(){
+
+        $.get("ressources/template/public/futurprojects.html", ajaxGetHtmlFuturProjects);
 
 }

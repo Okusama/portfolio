@@ -34,6 +34,29 @@ function onClickCoRealisation(){
 
 }
 
+function displayProjects(){
+
+        goToProjects();
+        window.setTimeout(getNowProjects, 6000);
+
+}
+
+function onClickNowProjects(){
+
+        $("#nowProjects path").toggleClass("hidden");
+        $("#futurProjects path").toggleClass("hidden");
+        getNowProjects();
+
+}
+
+function onClickFuturProjects(){
+
+        $("#nowProjects path").toggleClass("hidden");
+        $("#futurProjects path").toggleClass("hidden");
+        getFuturProjects();
+
+}
+
 function addToClipBoard(){
 
 	$(".copyText").fadeIn(500)

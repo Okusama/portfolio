@@ -73,8 +73,20 @@ function ajaxGetHtmlCoRealisation(reponse){
 
 }
 
-function ajaxGetHtmlProject(reponse){
+function ajaxGetHtmlProjects(reponse){
 
 	$("#main").html(reponse);
+
+}
+
+function ajaxGetHtmlNowProjects(reponse){
+
+        $("#showProjects").html(reponse);
+
+}
+
+function ajaxGetHtmlFuturProjects(reponse){
+
+        $("#showProjects").html(reponse);
 
 }

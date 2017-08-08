@@ -432,6 +432,7 @@ a {
   font-family: "poiret";
   font-size: 2rem;
   color: #FE003E;
+  opacity: 0;
   animation: fadeOutAuto 3s linear 1s forwards; }
 
 /******************* Admin ***********************/
