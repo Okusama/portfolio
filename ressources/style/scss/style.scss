@@ -194,7 +194,7 @@ a {
                 width: 45%;
                 margin-top: 30vh;
                 margin-left: 28vw;
-                animation: welcomeFlash 2s linear 5s forwards
+                animation: welcomeFlash 2s linear 3s forwards
 
         }
 
@@ -207,7 +207,7 @@ a {
                 stroke-dasharray: 2600;
                 stroke-dashoffset: 2600;
                 animation-direction: normal;
-                animation: draw 5s linear forwards;
+                animation: draw 3s linear forwards;
 
         }
 
@@ -216,7 +216,7 @@ a {
                 fill: $bgColor;
                 font-family: "futur";
                 font-size: 4rem;
-                animation: show 2s linear 5s forwards;
+                animation: show 2s linear 3s forwards;
 
         }
 
@@ -260,7 +260,7 @@ a {
                 stroke-dasharray: 2520;
                 stroke-dashoffset: 2520;
                 animation-direction: normal;
-                animation: draw 5s linear forwards;
+                animation: draw 3s linear forwards;
 
         }
 
@@ -269,7 +269,7 @@ a {
 
                 font-family: "futur";
                 font-size: 4rem;
-                fill: black;
+                fill: $bgColor;
 
 
         }

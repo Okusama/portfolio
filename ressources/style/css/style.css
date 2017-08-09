@@ -186,7 +186,7 @@ a {
   width: 45%;
   margin-top: 30vh;
   margin-left: 28vw;
-  animation: welcomeFlash 2s linear 5s forwards; }
+  animation: welcomeFlash 2s linear 3s forwards; }
 .mainWelcome path {
   stroke: #d6c9c9;
   stroke-width: 2px;
@@ -195,12 +195,12 @@ a {
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
   animation-direction: normal;
-  animation: draw 5s linear forwards; }
+  animation: draw 3s linear forwards; }
 .mainWelcome text {
   fill: #16161D;
   font-family: "futur";
   font-size: 4rem;
-  animation: show 2s linear 5s forwards; }
+  animation: show 2s linear 3s forwards; }
 
 /*Home Page*/
 .mainHome {
@@ -231,11 +231,11 @@ a {
     stroke-dasharray: 2520;
     stroke-dashoffset: 2520;
     animation-direction: normal;
-    animation: draw 5s linear forwards; }
+    animation: draw 3s linear forwards; }
   .mainHome text {
     font-family: "futur";
     font-size: 4rem;
-    fill: black; }
+    fill: #16161D; }
   .mainHome > :first-child {
     width: 45%; }
     .mainHome > :first-child path {
