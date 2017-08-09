@@ -26,14 +26,14 @@ function getMessage($db){
 
 }
 
-function saveRealisation($db, $name, $description, $urlLink){
+function saveRealisation($db, $name, $description, $href){
 
         $sources =
                 "INSERT INTO `realisation`(`name`, `description`, `lien`)
                 VALUES (?, ?, ?)";
 
         $query = $db->prepare($sources);
-        $query->execute([$name, $description, $urlLink]);
+        $query->execute([$name, $description, $href]);
 
 }
 

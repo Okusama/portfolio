@@ -436,7 +436,11 @@ a {
   animation: fadeOutAuto 3s linear 1s forwards; }
 
 /******************* Admin ***********************/
-label, input:nth-of-type(3) {
+.mainAdmin label, .mainAdmin input:nth-of-type(3) {
   color: #D9A4FC; }
+.mainAdmin li {
+  color: #FFB41D;
+  font-size: 1.5rem;
+  list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */

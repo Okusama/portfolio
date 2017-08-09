@@ -14,18 +14,18 @@ if (isset($_FILES["urlImage"])) {
 
 }
 
-if (isset($_POST["name"], $_POST["description"], $_POST["urlLink"])){
+if (isset($_POST["name"], $_POST["description"], $_POST["href"])){
 
         $name = htmlspecialchars($_POST["name"]);
         $description = htmlspecialchars($_POST["description"]);
-        $urlLink = htmlspecialchars($_POST["urlLink"]);
+        $href = htmlspecialchars($_POST["href"]);
 
         if (isset($_POST["send"])){
 
-                saveRealisation($db, $name, $description, $urlLink);
+                saveRealisation($db, $name, $description, $href);
 
         }
 
 }
 
-require_once "ressources/view/layoutadmin.phtml";
+require_once "ressources/template/admin/admin.phtml";

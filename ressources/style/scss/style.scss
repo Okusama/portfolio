@@ -776,8 +776,20 @@ a {
 
 /******************* Admin ***********************/
 
-label, input:nth-of-type(3) {
+.mainAdmin {
 
-        color: $realisationColor;
+        label, input:nth-of-type(3) {
+
+                color: $realisationColor;
+
+        }
+
+        li {
+
+                color: $contactColor;
+                font-size: 1.5rem;
+                list-style-type: none;
+
+        }
 
 }
