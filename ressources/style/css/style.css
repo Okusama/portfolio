@@ -383,11 +383,22 @@ a {
   stroke-dashoffset: 450;
   animation-direction: normal;
   animation: fadeOutAuto 5s linear 5s forwards, draw 2s linear 10s forwards; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg > path:nth-of-type(3) {
+      stroke-dasharray: 1540;
+      stroke-dashoffset: 1540; } }
 .mainPresentation section svg .textTitlePresentation {
   font-size: 3rem; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg .textTitlePresentation {
+      font-size: 4.5rem; } }
 .mainPresentation section svg .textPresentation {
   font-size: 2rem;
   text-anchor: start; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg .textPresentation {
+      font-size: 3.5rem;
+      text-anchor: middle; } }
 .mainPresentation section svg > :nth-last-child(-n+11) {
   font-family: "poiret";
   opacity: 0;

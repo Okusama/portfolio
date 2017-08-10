@@ -627,11 +627,24 @@ a {
                                 animation-direction: normal;
                                 animation: fadeOutAuto 5s linear 5s forwards, draw 2s linear 10s forwards;
 
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        stroke-dasharray: 1540;
+                                        stroke-dashoffset: 1540;
+
+                                }
+
                         }
 
                         .textTitlePresentation {
 
                                 font-size: 3rem;
+
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        font-size: 4.5rem;
+
+                                }
 
                         }
 
@@ -639,6 +652,13 @@ a {
 
                                 font-size: 2rem;
                                 text-anchor: start;
+
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        font-size: 3.5rem;
+                                        text-anchor: middle;
+
+                                }
 
                         }
 
