@@ -20,7 +20,7 @@ function goToHome(){
 
 function goToPresentation(){
 
-        $.get("ressources/template/public/presentation.html", ajaxGetHtmlPresentation);
+        $.get("ressources/template/public/responsive/portraitpresentation.html", ajaxGetHtmlPresentation);
 
 }
 

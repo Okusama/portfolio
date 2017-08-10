@@ -148,16 +148,6 @@
     opacity: 0.75; }
   100% {
     opacity: 0.9; } }
-@keyframes credit {
-  0% {
-    top: 100%;
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    20% {
-      top: 20%; }
-    opacity: 1; } }
 /***** Utilities class *****/
 .hidden {
   visibility: hidden; }
@@ -186,21 +176,26 @@ a {
   width: 45%;
   margin-top: 30vh;
   margin-left: 28vw;
-  animation: welcomeFlash 2s linear 3s forwards; }
-.mainWelcome path {
-  stroke: #d6c9c9;
-  stroke-width: 2px;
-  fill-opacity: 0;
-  fill: none;
-  stroke-dasharray: 2600;
-  stroke-dashoffset: 2600;
-  animation-direction: normal;
-  animation: draw 3s linear forwards; }
-.mainWelcome text {
-  fill: #16161D;
-  font-family: "futur";
-  font-size: 4rem;
-  animation: show 2s linear 3s forwards; }
+  animation: welcomeFlash 2s linear 5s forwards; }
+  @media screen and (max-width: 1025px) {
+    .mainWelcome section {
+      width: 70%;
+      margin-left: 16vw;
+      margin-top: 35vh; } }
+  .mainWelcome section path {
+    stroke: #d6c9c9;
+    stroke-width: 2px;
+    fill-opacity: 0;
+    fill: none;
+    stroke-dasharray: 2600;
+    stroke-dashoffset: 2600;
+    animation-direction: normal;
+    animation: draw 5s linear forwards; }
+  .mainWelcome section text {
+    fill: #16161D;
+    font-family: "futur";
+    font-size: 4rem;
+    animation: show 2s linear 5s forwards; }
 
 /*Home Page*/
 .mainHome {
@@ -218,9 +213,12 @@ a {
   @media screen and (orientation: portrait) {
     .mainHome {
       flex-direction: column; } }
+  @media screen and (max-width: 1025px) and (min-width: 640px) and (orientation: landscape) {
+    .mainHome {
+      margin-top: 10vh; } }
   .mainHome section {
     margin: 30px; }
-    @media screen and (max-width: 1024px) and (orientation: portrait) {
+    @media screen and (max-width: 1025px) and (orientation: portrait) {
       .mainHome section {
         margin-left: 15vw;
         width: 150%; } }
@@ -231,11 +229,13 @@ a {
     stroke-dasharray: 2520;
     stroke-dashoffset: 2520;
     animation-direction: normal;
-    animation: draw 3s linear forwards; }
+    animation: draw 5s linear forwards; }
   .mainHome text {
     font-family: "futur";
-    font-size: 4rem;
-    fill: #16161D; }
+    font-size: 4rem; }
+    @media screen and (min-width: 1025px) {
+      .mainHome text {
+        fill: #16161D; } }
   .mainHome > :first-child {
     width: 45%; }
     .mainHome > :first-child path {
@@ -243,9 +243,12 @@ a {
     .mainHome > :first-child > :hover {
       box-shadow: 0 0 30px rgba(255, 146, 97, 0.4), inset 0 0 30px rgba(255, 146, 97, 0.4);
       text-shadow: 0 0 80px rgba(255, 146, 97, 0.4);
-      animation: flash 0.8s linear forwards; }
+      animation: flash 1s linear forwards; }
       .mainHome > :first-child > :hover text {
         fill: #FF9261; }
+    @media screen and (max-width: 1025px) {
+      .mainHome > :first-child text {
+        fill: #FE4F00; } }
   .mainHome > :nth-child(2) {
     width: 45%; }
     .mainHome > :nth-child(2) path {
@@ -253,9 +256,12 @@ a {
     .mainHome > :nth-child(2) > :hover {
       box-shadow: 0 0 30px rgba(229, 194, 252, 0.4), inset 0 0 30px rgba(229, 194, 252, 0.4);
       text-shadow: 0 0 50px rgba(229, 194, 252, 0.4);
-      animation: flash 0.8s linear forwards; }
+      animation: flash 1s linear forwards; }
       .mainHome > :nth-child(2) > :hover text {
         fill: #D9A4FC; }
+    @media screen and (max-width: 1025px) {
+      .mainHome > :nth-child(2) text {
+        fill: #D9A4FC; } }
   .mainHome > :nth-child(3) {
     width: 45%; }
     .mainHome > :nth-child(3) path {
@@ -263,9 +269,12 @@ a {
     .mainHome > :nth-child(3) > :hover {
       box-shadow: 0 0 30px rgba(254, 142, 170, 0.4), inset 0 0 30px rgba(254, 142, 170, 0.4);
       text-shadow: 0 0 50px rgba(254, 142, 170, 0.4);
-      animation: flash 0.8s linear forwards; }
+      animation: flash 1s linear forwards; }
       .mainHome > :nth-child(3) > :hover text {
         fill: #FE003E; }
+    @media screen and (max-width: 1025px) {
+      .mainHome > :nth-child(3) text {
+        fill: #FE003E; } }
   .mainHome > :last-child {
     width: 45%; }
     .mainHome > :last-child path {
@@ -273,9 +282,12 @@ a {
     .mainHome > :last-child > :hover {
       box-shadow: 0 0 30px rgba(255, 202, 94, 0.4), inset 0 0 30px rgba(255, 202, 94, 0.4);
       text-shadow: 0 0 50px rgba(255, 202, 94, 0.4);
-      animation: flash 0.8s linear forwards; }
+      animation: flash 1s linear forwards; }
       .mainHome > :last-child > :hover text {
         fill: #FFB41D; }
+    @media screen and (max-width: 1025px) {
+      .mainHome > :last-child text {
+        fill: #FFB41D; } }
 
 /*Global of Presentation, Contact, Realisation and Project*/
 .mainPresentation section, .mainContact section, .mainRealisation section, .mainProject section {
@@ -295,11 +307,20 @@ a {
     stroke-dashoffset: 4500;
     animation-direction: normal;
     animation: draw 8s linear forwards; }
+    @media screen and (max-width: 1025px) and (orientation: portrait) {
+      .mainPresentation section svg > :first-child, .mainContact section svg > :first-child, .mainRealisation section svg > :first-child, .mainProject section svg > :first-child {
+        stroke-dasharray: 7160;
+        stroke-dashoffset: 7160;
+        animation-direction: normal;
+        animation: draw 6s linear forwards; } }
   .mainPresentation section svg > :nth-child(2), .mainContact section svg > :nth-child(2), .mainRealisation section svg > :nth-child(2), .mainProject section svg > :nth-child(2) {
     opacity: 0;
     font-family: "futur";
     font-size: 3rem;
     animation: fadeOutAuto 5s linear 5s forwards; }
+    @media screen and (max-width: 1025px) and (orientation: portrait) {
+      .mainPresentation section svg > :nth-child(2), .mainContact section svg > :nth-child(2), .mainRealisation section svg > :nth-child(2), .mainProject section svg > :nth-child(2) {
+        font-size: 5rem; } }
   .mainPresentation section svg a, .mainContact section svg a, .mainRealisation section svg a, .mainProject section svg a {
     opacity: 0;
     animation: fadeOutAuto 5s linear 5s forwards; }
@@ -312,21 +333,44 @@ a {
   font-family: "quicksand";
   font-size: 2.5rem;
   animation: fadeOutAuto 5s linear 6s forwards; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg .languages {
+      font-size: 3.5rem; } }
 .mainPresentation section svg circle:nth-of-type(1) {
   stroke-dasharray: 453;
   stroke-dashoffset: 453; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg circle:nth-of-type(1) {
+      stroke-dasharray: 754;
+      stroke-dashoffset: 754; } }
 .mainPresentation section svg circle:nth-of-type(2) {
   stroke-dasharray: 396;
   stroke-dashoffset: 396; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg circle:nth-of-type(2) {
+      stroke-dasharray: 660;
+      stroke-dashoffset: 660; } }
 .mainPresentation section svg circle:nth-of-type(3) {
   stroke-dasharray: 340;
   stroke-dashoffset: 340; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg circle:nth-of-type(3) {
+      stroke-dasharray: 550;
+      stroke-dashoffset: 550; } }
 .mainPresentation section svg circle:nth-of-type(4) {
   stroke-dasharray: 283;
   stroke-dashoffset: 283; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg circle:nth-of-type(4) {
+      stroke-dasharray: 480;
+      stroke-dashoffset: 480; } }
 .mainPresentation section svg circle:nth-of-type(5) {
   stroke-dasharray: 283;
   stroke-dashoffset: 283; }
+  @media screen and (max-width: 1025px) and (orientation: portrait) {
+    .mainPresentation section svg circle:nth-of-type(5) {
+      stroke-dasharray: 480;
+      stroke-dashoffset: 480; } }
 .mainPresentation section svg > path:nth-of-type(2) {
   opacity: 0;
   stroke-dasharray: 1540;

@@ -126,22 +126,6 @@ $contactColorNeon: rgba(255, 202, 94, 0.4);
 
 }
 
-@keyframes credit {
-
-        0% {
-                top: 100%;
-                opacity: 0;
-        }
-        50% { opacity: 1;}
-        100% {
-
-                20% { top: 20%; }
-                opacity: 1;
-
-        }
-
-}
-
 /***** Utilities class *****/
 
 .hidden{
@@ -188,35 +172,43 @@ a {
 
 .mainWelcome {
 
-        section{
+        section {
 
                 text-align: center;
                 width: 45%;
                 margin-top: 30vh;
                 margin-left: 28vw;
-                animation: welcomeFlash 2s linear 3s forwards
+                animation: welcomeFlash 2s linear 5s forwards;
 
-        }
+                @media screen and (max-width: 1025px) {
 
-        path{
+                        width: 70%;
+                        margin-left: 16vw;
+                        margin-top: 35vh;
 
-                stroke: $welcomeColor;
-                stroke-width: 2px;
-                fill-opacity: 0;
-                fill: none;
-                stroke-dasharray: 2600;
-                stroke-dashoffset: 2600;
-                animation-direction: normal;
-                animation: draw 3s linear forwards;
+                }
 
-        }
+                path {
 
-        text{
+                        stroke: $welcomeColor;
+                        stroke-width: 2px;
+                        fill-opacity: 0;
+                        fill: none;
+                        stroke-dasharray: 2600;
+                        stroke-dashoffset: 2600;
+                        animation-direction: normal;
+                        animation: draw 5s linear forwards;
 
-                fill: $bgColor;
-                font-family: "futur";
-                font-size: 4rem;
-                animation: show 2s linear 3s forwards;
+                }
+
+                text{
+
+                        fill: $bgColor;
+                        font-family: "futur";
+                        font-size: 4rem;
+                        animation: show 2s linear 5s forwards;
+
+                }
 
         }
 
@@ -238,11 +230,17 @@ a {
 
         }
 
+        @media screen and (max-width: 1025px) and (min-width: 640px) and (orientation: landscape){
+
+                margin-top: 10vh;
+
+        }
+
         section{
 
                 margin: 30px;
 
-                @media screen and (max-width: 1024px) and (orientation: portrait){
+                @media screen and (max-width: 1025px) and (orientation: portrait){
 
                         margin-left: 15vw;
                         width: 150%;
@@ -260,7 +258,7 @@ a {
                 stroke-dasharray: 2520;
                 stroke-dashoffset: 2520;
                 animation-direction: normal;
-                animation: draw 3s linear forwards;
+                animation: draw 5s linear forwards;
 
         }
 
@@ -269,8 +267,12 @@ a {
 
                 font-family: "futur";
                 font-size: 4rem;
-                fill: $bgColor;
 
+                @media screen and (min-width: 1025px){
+
+                        fill: $bgColor;
+
+                }
 
         }
 
@@ -290,7 +292,7 @@ a {
                         box-shadow: 0 0 30px $presentationColorNeon, inset 0 0 30px $presentationColorNeon;
                         text-shadow: 0 0 80px $presentationColorNeon;
 
-                        animation: flash 0.8s linear forwards;
+                        animation: flash 1s linear forwards;
 
                         text{
 
@@ -299,6 +301,16 @@ a {
                         }
 
 
+
+                }
+
+                @media screen and (max-width: 1025px){
+
+                        text {
+
+                                fill: $presentationColor;
+
+                        }
 
                 }
 
@@ -316,14 +328,24 @@ a {
 
                 }
 
-                >:hover{
+                >:hover {
 
                         box-shadow: 0 0 30px $realisationColorNeon, inset 0 0 30px $realisationColorNeon;
                         text-shadow: 0 0 50px $realisationColorNeon;
 
-                        animation: flash 0.8s linear forwards;
+                        animation: flash 1s linear forwards;
 
-                        text{
+                        text {
+
+                                fill: $realisationColor;
+
+                        }
+
+                }
+
+                @media screen and (max-width: 1025px){
+
+                        text {
 
                                 fill: $realisationColor;
 
@@ -349,7 +371,7 @@ a {
                         box-shadow: 0 0 30px $projectsColorNeon, inset 0 0 30px $projectsColorNeon;
                         text-shadow: 0 0 50px $projectsColorNeon;
 
-                        animation: flash 0.8s linear forwards;
+                        animation: flash 1s linear forwards;
 
                         text{
 
@@ -357,6 +379,15 @@ a {
 
                         }
 
+                }
+
+                @media screen and (max-width: 1025px){
+
+                        text {
+
+                                fill: $projectsColor;
+
+                        }
 
                 }
 
@@ -378,9 +409,19 @@ a {
                         box-shadow: 0 0 30px $contactColorNeon, inset 0 0 30px $contactColorNeon;
                         text-shadow: 0 0 50px $contactColorNeon;
 
-                        animation: flash 0.8s linear forwards;
+                        animation: flash 1s linear forwards;
 
                         text{
+
+                                fill: $contactColor;
+
+                        }
+
+                }
+
+                @media screen and (max-width: 1025px){
+
+                        text {
 
                                 fill: $contactColor;
 
@@ -427,6 +468,15 @@ a {
                                 animation-direction: normal;
                                 animation: draw 8s linear forwards;
 
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        stroke-dasharray: 7160;
+                                        stroke-dashoffset: 7160;
+                                        animation-direction: normal;
+                                        animation: draw 6s linear forwards;
+
+                                }
+
 
                         }
 
@@ -437,12 +487,19 @@ a {
                                 font-size: 3rem;
                                 animation: fadeOutAuto 5s linear 5s forwards;
 
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        font-size: 5rem;
+
+                                }
+
                         }
 
                         a {
 
                                 opacity: 0;
                                 animation: fadeOutAuto 5s linear 5s forwards;
+
 
                         }
 
@@ -473,12 +530,26 @@ a {
                                 font-size: 2.5rem;
                                 animation: fadeOutAuto 5s linear 6s forwards;
 
+
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        font-size: 3.5rem;
+
+                                }
+
                         }
 
                         circle:nth-of-type(1){
 
                                 stroke-dasharray: 453;
                                 stroke-dashoffset: 453;
+
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        stroke-dasharray: 754;
+                                        stroke-dashoffset: 754;
+
+                                }
 
                         }
 
@@ -487,12 +558,26 @@ a {
                                 stroke-dasharray: 396;
                                 stroke-dashoffset: 396;
 
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        stroke-dasharray: 660;
+                                        stroke-dashoffset: 660;
+
+                                }
+
                         }
 
                         circle:nth-of-type(3){
 
                                 stroke-dasharray: 340;
                                 stroke-dashoffset: 340;
+
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        stroke-dasharray: 550;
+                                        stroke-dashoffset: 550;
+
+                                }
 
                         }
 
@@ -501,12 +586,26 @@ a {
                                 stroke-dasharray: 283;
                                 stroke-dashoffset: 283;
 
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        stroke-dasharray: 480;
+                                        stroke-dashoffset: 480;
+
+                                }
+
                         }
 
                         circle:nth-of-type(5){
 
                                 stroke-dasharray: 283;
                                 stroke-dashoffset: 283;
+
+                                @media screen and (max-width: 1025px) and (orientation: portrait){
+
+                                        stroke-dasharray: 480;
+                                        stroke-dashoffset: 480;
+
+                                }
 
                         }
 
