@@ -20,7 +20,23 @@ function goToHome(){
 
 function goToPresentation(){
 
-        $.get("ressources/template/public/responsive/portraitpresentation.html", ajaxGetHtmlPresentation);
+        var width = $(window).width();
+        var orientation = screen.orientation.type;
+
+        console.log(orientation);
+
+        if ((width < 1025) && (orientation === "landscape-primary")) {
+
+                $.get("ressources/template/public/responsive/portraitpresentation.html", ajaxGetHtmlPresentation);
+
+
+        } else {
+
+                $.get("ressources/template/public/presentation.html", ajaxGetHtmlPresentation);
+
+        }
+
+
 
 }
 
