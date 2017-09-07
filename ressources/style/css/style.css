@@ -296,7 +296,7 @@ a {
   width: 90%; }
   .mainPresentation section svg path, .mainPresentation section svg circle, .mainContact section svg path, .mainContact section svg circle, .mainRealisation section svg path, .mainRealisation section svg circle, .mainProject section svg path, .mainProject section svg circle {
     stroke-width: 2px;
-    fill-opacity: 0;
+    fill-opacity: 0.1;
     fill: none; }
   .mainPresentation section svg circle, .mainContact section svg circle, .mainRealisation section svg circle, .mainProject section svg circle {
     opacity: 0;
@@ -307,20 +307,11 @@ a {
     stroke-dashoffset: 4500;
     animation-direction: normal;
     animation: draw 8s linear forwards; }
-    @media screen and (max-width: 1025px) and (orientation: portrait) {
-      .mainPresentation section svg > :first-child, .mainContact section svg > :first-child, .mainRealisation section svg > :first-child, .mainProject section svg > :first-child {
-        stroke-dasharray: 7160;
-        stroke-dashoffset: 7160;
-        animation-direction: normal;
-        animation: draw 6s linear forwards; } }
   .mainPresentation section svg > :nth-child(2), .mainContact section svg > :nth-child(2), .mainRealisation section svg > :nth-child(2), .mainProject section svg > :nth-child(2) {
     opacity: 0;
     font-family: "futur";
     font-size: 3rem;
     animation: fadeOutAuto 5s linear 5s forwards; }
-    @media screen and (max-width: 1025px) and (orientation: portrait) {
-      .mainPresentation section svg > :nth-child(2), .mainContact section svg > :nth-child(2), .mainRealisation section svg > :nth-child(2), .mainProject section svg > :nth-child(2) {
-        font-size: 5rem; } }
   .mainPresentation section svg a, .mainContact section svg a, .mainRealisation section svg a, .mainProject section svg a {
     opacity: 0;
     animation: fadeOutAuto 5s linear 5s forwards; }
@@ -328,81 +319,88 @@ a {
 /*Presentation page*/
 .mainPresentation section svg path, .mainPresentation section svg circle, .mainPresentation section svg text {
   stroke: #FE4F00; }
-.mainPresentation section svg .languages {
+.mainPresentation section svg circle {
+  stroke-width: 2px;
+  fill-opacity: 0;
+  fill: none; }
+.mainPresentation section .languages {
   opacity: 0;
   font-family: "quicksand";
-  font-size: 2.5rem;
+  font-size: 3rem;
   animation: fadeOutAuto 5s linear 6s forwards; }
   @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg .languages {
-      font-size: 3.5rem; } }
-.mainPresentation section svg circle:nth-of-type(1) {
-  stroke-dasharray: 453;
-  stroke-dashoffset: 453; }
-  @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg circle:nth-of-type(1) {
-      stroke-dasharray: 754;
-      stroke-dashoffset: 754; } }
-.mainPresentation section svg circle:nth-of-type(2) {
-  stroke-dasharray: 396;
-  stroke-dashoffset: 396; }
-  @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg circle:nth-of-type(2) {
-      stroke-dasharray: 660;
-      stroke-dashoffset: 660; } }
-.mainPresentation section svg circle:nth-of-type(3) {
-  stroke-dasharray: 340;
-  stroke-dashoffset: 340; }
-  @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg circle:nth-of-type(3) {
-      stroke-dasharray: 550;
-      stroke-dashoffset: 550; } }
-.mainPresentation section svg circle:nth-of-type(4) {
-  stroke-dasharray: 283;
-  stroke-dashoffset: 283; }
-  @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg circle:nth-of-type(4) {
-      stroke-dasharray: 480;
-      stroke-dashoffset: 480; } }
-.mainPresentation section svg circle:nth-of-type(5) {
-  stroke-dasharray: 283;
-  stroke-dashoffset: 283; }
-  @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg circle:nth-of-type(5) {
-      stroke-dasharray: 480;
-      stroke-dashoffset: 480; } }
-.mainPresentation section svg > path:nth-of-type(2) {
+    .mainPresentation section .languages {
+      font-size: 4rem; } }
+.mainPresentation section section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px; }
+  @media screen and (max-width: 1025px) {
+    .mainPresentation section section {
+      flex-wrap: wrap; } }
+  .mainPresentation section section .circle {
+    width: 15%; }
+    @media screen and (max-width: 1025px) {
+      .mainPresentation section section .circle {
+        width: 20%;
+        margin: 20px; } }
+    @media screen and (max-width: 650px) {
+      .mainPresentation section section .circle {
+        width: 40%;
+        margin: 10px; } }
+    .mainPresentation section section .circle circle {
+      opacity: 0;
+      animation: draw 3s linear 5s forwards, fadeOutAuto 5s linear 5s forwards; }
+  .mainPresentation section section .html circle {
+    stroke-dasharray: 754;
+    stroke-dashoffset: 754; }
+  .mainPresentation section section .css circle {
+    stroke-dasharray: 660;
+    stroke-dashoffset: 660; }
+  .mainPresentation section section .js circle {
+    stroke-dasharray: 550;
+    stroke-dashoffset: 550; }
+  .mainPresentation section section .php circle {
+    stroke-dasharray: 480;
+    stroke-dashoffset: 480; }
+  .mainPresentation section section .sql circle {
+    stroke-dasharray: 480;
+    stroke-dashoffset: 480; }
+.mainPresentation section .text {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: solid 2px #FE4F00;
   opacity: 0;
-  stroke-dasharray: 1540;
-  stroke-dashoffset: 1540;
-  animation-direction: normal;
-  animation: fadeOutAuto 5s linear 5s forwards, draw 4s linear 8s forwards; }
-.mainPresentation section svg > path:nth-of-type(3) {
-  opacity: 0;
-  stroke-dasharray: 450;
-  stroke-dashoffset: 450;
-  animation-direction: normal;
-  animation: fadeOutAuto 5s linear 5s forwards, draw 2s linear 10s forwards; }
-  @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg > path:nth-of-type(3) {
-      stroke-dasharray: 1540;
-      stroke-dashoffset: 1540; } }
-.mainPresentation section svg .textTitlePresentation {
-  font-size: 3rem; }
-  @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg .textTitlePresentation {
-      font-size: 4.5rem; } }
-.mainPresentation section svg .textPresentation {
-  font-size: 2rem;
-  text-anchor: start; }
-  @media screen and (max-width: 1025px) and (orientation: portrait) {
-    .mainPresentation section svg .textPresentation {
-      font-size: 3.5rem;
-      text-anchor: middle; } }
-.mainPresentation section svg > :nth-last-child(-n+11) {
-  font-family: "poiret";
-  opacity: 0;
-  animation: fadeOutAuto 5s linear 11s forwards; }
+  animation: fadeOutAuto 5s linear 5s forwards; }
+  @media screen and (max-width: 1025px) {
+    .mainPresentation section .text {
+      flex-direction: column; } }
+  .mainPresentation section .text article:nth-of-type(2) {
+    border-left: solid 2px #FE4F00;
+    border-right: solid 2px #FE4F00; }
+    @media screen and (max-width: 1025px) {
+      .mainPresentation section .text article:nth-of-type(2) {
+        border: none; } }
+  .mainPresentation section .text article {
+    padding: 50px;
+    text-align: center;
+    color: #FE4F00;
+    width: 30%; }
+    @media screen and (max-width: 1025px) {
+      .mainPresentation section .text article {
+        width: 100%; } }
+    .mainPresentation section .text article h2 {
+      font-size: 3rem; }
+      @media screen and (max-width: 1025px) {
+        .mainPresentation section .text article h2 {
+          font-size: 2rem; } }
+    .mainPresentation section .text article p {
+      font-size: 2rem; }
+      @media screen and (max-width: 1025px) {
+        .mainPresentation section .text article p {
+          font-size: 1.6rem; } }
 
 /*Contact page*/
 .mainContact section svg path, .mainContact section svg circle, .mainContact section svg text {
@@ -427,9 +425,9 @@ a {
     display: flex;
     flex-direction: column;
     animation: fadeOutAuto 5s linear 5s forwards; }
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1024px) {
       .mainContact section article form {
-        width: 80%; } }
+        margin-left: 11vw; } }
     .mainContact section article form textarea {
       resize: vertical; }
     .mainContact section article form input, .mainContact section article form textarea, .mainContact section article form button, .mainContact section article form label {
@@ -463,6 +461,9 @@ a {
   color: #D9A4FC;
   opacity: 0;
   animation: fadeOutAuto 2s linear 1s forwards; }
+  @media screen and (max-width: 1025px) {
+    .mainRealisation :last-child p {
+      font-size: 1.6rem; } }
 .mainRealisation :last-child article {
   display: flex;
   flex-direction: row;
@@ -472,6 +473,9 @@ a {
   padding: 10px;
   opacity: 0;
   animation: fadeOutAuto 3s linear 1s forwards; }
+  @media screen and (max-width: 640px) {
+    .mainRealisation :last-child article {
+      flex-direction: column; } }
   .mainRealisation :last-child article img {
     width: 50%; }
 

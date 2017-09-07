@@ -448,7 +448,7 @@ a {
                         path, circle {
 
                                 stroke-width: 2px;
-                                fill-opacity: 0;
+                                fill-opacity: 0.1;
                                 fill: none;
 
                         }
@@ -468,16 +468,6 @@ a {
                                 animation-direction: normal;
                                 animation: draw 8s linear forwards;
 
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
-
-                                        stroke-dasharray: 7160;
-                                        stroke-dashoffset: 7160;
-                                        animation-direction: normal;
-                                        animation: draw 6s linear forwards;
-
-                                }
-
-
                         }
 
                         >:nth-child(2) {
@@ -486,12 +476,6 @@ a {
                                 font-family: "futur";
                                 font-size: 3rem;
                                 animation: fadeOutAuto 5s linear 5s forwards;
-
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
-
-                                        font-size: 5rem;
-
-                                }
 
                         }
 
@@ -517,34 +501,80 @@ a {
 
                 svg {
 
-                        path, circle, text{
+                        path, circle, text {
 
                                 stroke: $presentationColor;
 
                         }
 
-                        .languages {
+                        circle {
 
-                                opacity: 0;
-                                font-family: "quicksand";
-                                font-size: 2.5rem;
-                                animation: fadeOutAuto 5s linear 6s forwards;
+                                stroke-width: 2px;
+                                fill-opacity: 0;
+                                fill: none;
+
+                        }
+
+                }
+
+                .languages {
+
+                        opacity: 0;
+                        font-family: "quicksand";
+                        font-size: 3rem;
+                        animation: fadeOutAuto 5s linear 6s forwards;
 
 
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
+                        @media screen and (max-width: 1025px) and (orientation: portrait){
 
-                                        font-size: 3.5rem;
+                                font-size: 4rem;
+
+                        }
+
+                }
+
+                section {
+
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 50px;
+
+                        @media screen and (max-width: 1025px){
+
+                                flex-wrap: wrap;
+
+                        }
+
+                        .circle {
+
+                                width: 15%;
+
+                                @media screen and (max-width: 1025px){
+
+                                        width: 20%;
+                                        margin: 20px;
+
+                                }
+
+                                @media screen and (max-width: 650px){
+
+                                        width: 40%;
+                                        margin: 10px;
+
+                                }
+
+                                circle {
+
+                                        opacity: 0;
+                                        animation: draw 3s linear 5s forwards, fadeOutAuto 5s linear 5s forwards;
 
                                 }
 
                         }
 
-                        circle:nth-of-type(1){
+                        .html {
 
-                                stroke-dasharray: 453;
-                                stroke-dashoffset: 453;
-
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
+                                circle {
 
                                         stroke-dasharray: 754;
                                         stroke-dashoffset: 754;
@@ -553,12 +583,9 @@ a {
 
                         }
 
-                        circle:nth-of-type(2){
+                        .css {
 
-                                stroke-dasharray: 396;
-                                stroke-dashoffset: 396;
-
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
+                                circle{
 
                                         stroke-dasharray: 660;
                                         stroke-dashoffset: 660;
@@ -567,12 +594,9 @@ a {
 
                         }
 
-                        circle:nth-of-type(3){
+                        .js {
 
-                                stroke-dasharray: 340;
-                                stroke-dashoffset: 340;
-
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
+                                circle {
 
                                         stroke-dasharray: 550;
                                         stroke-dashoffset: 550;
@@ -581,12 +605,9 @@ a {
 
                         }
 
-                        circle:nth-of-type(4){
+                        .php {
 
-                                stroke-dasharray: 283;
-                                stroke-dashoffset: 283;
-
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
+                                circle{
 
                                         stroke-dasharray: 480;
                                         stroke-dashoffset: 480;
@@ -595,12 +616,9 @@ a {
 
                         }
 
-                        circle:nth-of-type(5){
+                        .sql {
 
-                                stroke-dasharray: 283;
-                                stroke-dashoffset: 283;
-
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
+                                circle {
 
                                         stroke-dasharray: 480;
                                         stroke-dashoffset: 480;
@@ -609,64 +627,73 @@ a {
 
                         }
 
-                        >path:nth-of-type(2) {
+                }
 
-                                opacity: 0;
-                                stroke-dasharray: 1540;
-                                stroke-dashoffset: 1540;
-                                animation-direction: normal;
-                                animation: fadeOutAuto 5s linear 5s forwards, draw 4s linear 8s forwards;
+                .text {
+
+                        display: flex;
+                        justify-content: space-around;
+                        margin-top: 50px;
+                        padding-top: 30px;
+                        border-top: solid 2px $presentationColor;
+                        opacity: 0;
+                        animation: fadeOutAuto 5s linear 5s forwards;
+
+                        @media screen and (max-width: 1025px){
+
+                                flex-direction: column;
 
                         }
 
-                        >path:nth-of-type(3) {
+                        article:nth-of-type(2) {
 
-                                opacity: 0;
-                                stroke-dasharray: 450;
-                                stroke-dashoffset: 450;
-                                animation-direction: normal;
-                                animation: fadeOutAuto 5s linear 5s forwards, draw 2s linear 10s forwards;
+                                border-left: solid 2px $presentationColor;
+                                border-right: solid 2px $presentationColor;
 
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
+                                @media screen and (max-width: 1025px){
 
-                                        stroke-dasharray: 1540;
-                                        stroke-dashoffset: 1540;
+                                        border : none;
 
                                 }
 
                         }
 
-                        .textTitlePresentation {
+                        article {
 
-                                font-size: 3rem;
+                                padding: 50px;
+                                text-align: center;
+                                color: $presentationColor;
+                                width: 30%;
 
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
+                                @media screen and (max-width: 1025px){
 
-                                        font-size: 4.5rem;
-
-                                }
-
-                        }
-
-                        .textPresentation {
-
-                                font-size: 2rem;
-                                text-anchor: start;
-
-                                @media screen and (max-width: 1025px) and (orientation: portrait){
-
-                                        font-size: 3.5rem;
-                                        text-anchor: middle;
+                                        width: 100%;
 
                                 }
 
-                        }
+                                h2{
 
-                        >:nth-last-child(-n+11){
+                                        font-size: 3rem;
 
-                                font-family: "poiret";
-                                opacity: 0;
-                                animation: fadeOutAuto 5s linear 11s forwards;
+                                        @media screen and (max-width: 1025px){
+
+                                                font-size: 2rem;
+
+                                        }
+
+                                }
+
+                                p {
+
+                                        font-size: 2rem;
+
+                                        @media screen and (max-width: 1025px){
+
+                                                font-size: 1.6rem;
+
+                                        }
+
+                                }
 
                         }
 
@@ -728,9 +755,9 @@ a {
                                 flex-direction: column;
                                 animation: fadeOutAuto 5s linear 5s forwards;
 
-                                @media screen and (max-width: 1600px){
+                                @media screen and (max-width: 1024px){
 
-                                width: 80%
+                                        margin-left: 11vw;
 
                                 }
 
@@ -823,6 +850,12 @@ a {
                         opacity: 0;
                         animation: fadeOutAuto 2s linear 1s forwards;
 
+                        @media screen and (max-width: 1025px){
+
+                                font-size: 1.6rem;
+
+                        }
+
                 }
 
                 article {
@@ -836,6 +869,11 @@ a {
                         opacity: 0;
                         animation: fadeOutAuto 3s linear 1s forwards;
 
+                        @media screen and (max-width: 640px){
+
+                                flex-direction: column;
+
+                        }
 
                         img {
 

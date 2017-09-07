@@ -8,8 +8,7 @@ $(document).ready(function(){
         $("#main").on("click", "#returnHome", goToHome);
 
         $("#main").on("click", "#presentation", goToPresentation);
-        window.addEventListener("deviceorientation", goToPresentation);
-
+        
         $("#main").on("click", "#contact", goToContact);
         $("#main").on("click", "#discord", addToClipBoard);
 

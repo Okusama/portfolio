@@ -59,14 +59,37 @@ function onClickFuturProjects(){
 
 function addToClipBoard(){
 
-	$(".copyText").fadeIn(500)
-			.animate({ opacity: 1})
-			.delay(1000)
-			.fadeOut(500);
+        $('#formContact').append("<input id='tag_discord' value='Okusama#6915' />");
 
-	const NAMETAG = "Okusama#6915";
+        var nameTag = $('#tag_discord');
 
-	NAMETAG.select();
-	document.execCommand("copy");
+        nameTag.select();
+
+        $.when(document.execCommand('copy'))
+                .then(function(bReturn) {
+
+                if(bReturn){
+
+                    //message de réussite
+                    $(".copyText").fadeIn(500)
+            			.animate({ opacity: 1})
+            			.delay(1000)
+            			.fadeOut(500);
+
+                    $("#discord").fadeOut(200)
+                                    .animate({opacity: 0})
+                                    .delay(1200)
+                                    .fadeIn(500)
+                                    .animate({opacity: 1});
+
+                    $( "#tag_discord" ).remove();
+
+                } else {
+
+                   //Echec de la copie, l'action est peut-être désactivé sur votre navigateur ?
+
+                }
+
+        });
 
 }
